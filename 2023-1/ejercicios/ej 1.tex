@@ -1,0 +1,99 @@
+\documentclass[letterpaper,11pt]{article}
+\oddsidemargin -1.0cm \textwidth 17.5cm
+
+\usepackage[utf8]{inputenc}
+\usepackage[activeacute,spanish, es-lcroman]{babel}
+\decimalpoint
+\usepackage{amsfonts,setspace}
+\usepackage{amsmath}
+\usepackage{amssymb, amsmath, amsthm}
+\usepackage{comment}
+\usepackage{float}
+\usepackage{amssymb}
+\usepackage{dsfont}
+\usepackage{anysize}
+\usepackage{multicol}
+\usepackage{enumerate}
+\usepackage{graphicx}
+\usepackage[left=1.5cm,top=2cm,right=1.5cm, bottom=1.7cm]{geometry}
+\setlength\headheight{1.5em} 
+\usepackage{fancyhdr}
+\usepackage{multicol}
+\usepackage{hyperref}
+\usepackage{wrapfig}
+\usepackage{subcaption}
+\usepackage{siunitx}
+\usepackage{cancel}
+\usepackage{mdwlist}
+\usepackage{svg}
+\pagestyle{fancy}
+\fancyhf{}
+\renewcommand{\labelenumi}{\normalsize\bfseries P\arabic{enumi}.}
+\renewcommand{\labelenumii}{\normalsize\bfseries (\alph{enumii})}
+\renewcommand{\labelenumiii}{\normalsize\bfseries \roman{enumiii})}
+
+
+\begin{document}
+
+\fancyhead[L]{\itshape{Facultad de Ciencias F\'isicas y Matem\'aticas}}
+\fancyhead[R]{\itshape{Universidad de Chile}}
+
+\begin{minipage}{11.5cm}
+    \begin{flushleft}
+        \hspace*{-0.6cm}\textbf{FI1000-1 Introducción a la Física Clásica}\\
+        \hspace*{-0.6cm}\textbf{Profesor:} Ignacio Bordeu\\
+        \hspace*{-0.6cm}\textbf{Auxiliares:} Alejandro Cartes \& Simón Yáñez\\
+        \hspace*{-0.6cm}\textbf{Ayudante:} Javier Cubillos\\
+    \end{flushleft}
+\end{minipage}
+
+\begin{picture}(2,3)
+    \put(366, 10){\includegraphics[scale=0.9]{2020-1/Imágenes/logo/dfi-fcfm.pdf}}
+\end{picture}
+
+\begin{center}
+	\LARGE\textbf{Ejercicio \#1}
+\end{center}
+
+\vspace{-1cm}
+\begin{enumerate}\setlength{\itemsep}{0.4cm}
+
+\rfoot[]{pág. \thepage}
+
+\item[]
+
+\item Considere la construcción de la figura: un cuarto de circunferencia de radio 1, los segmentos $\overline{EA}$ y $\overline{FB}$ tienen igual longitud, y los ángulos $\alpha$ y $\beta$ son conocidos. Analice los triángulos rectángulos para determinar:
+
+\begin{multicols}{2}
+    \begin{figure}[H]
+        \centering
+        \includegraphics[width=0.8\linewidth]{2023-1/img/ejercicios/ej1.png}
+    \end{figure}
+    \columnbreak
+    \begin{enumerate}
+        \item (2 puntos) El largo de los segmentos $\overline{EA}$, $\overline{ED}$ y $\overline{OD}$.
+        
+        \item (2 puntos) Usando los segmentos encontrados anteriormente, determine el largo de los segmentos $\overline{DF}$ y $\overline{DB}$
+        
+        \item (2 puntos) En base a todo lo anterior, muestre que se cumple la identidad $$\sin\left(\alpha+\beta\right) = \sin\alpha\cos\beta+\cos\alpha\sin\beta$$
+        
+        % \item Los segmentos $\overline{OA}$, $\overline{OB}$ y $\overline{EF}$.\\
+        % Concluya que:
+        % $$\cos\left(\alpha+\beta\right)=\cos\alpha\cos\beta-\sin\alpha\sin\beta$$
+    \end{enumerate}
+\end{multicols}
+
+\hline
+
+
+
+
+% Para imágenes vectoriales -> el texto tiene que estar en LaTeX
+% \begin{figure}[htbp]
+%   \centering
+%   \svgpath{../Imagenes/ejercicios}  -> .. irse pa'trás 
+%   \includesvg{ej5.svg}
+% \end{figure}
+
+\end{enumerate}
+\end{document}

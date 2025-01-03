@@ -1,0 +1,85 @@
+\documentclass[letterpaper,11pt]{article}
+\oddsidemargin -1.0cm \textwidth 17.5cm
+
+\usepackage[utf8]{inputenc}
+\usepackage[activeacute,spanish, es-lcroman]{babel}
+\decimalpoint
+\usepackage{amsfonts,setspace}
+\usepackage{amsmath}
+\usepackage{amssymb, amsmath, amsthm}
+\usepackage{comment}
+\usepackage{float}
+\usepackage{amssymb}
+\usepackage{dsfont}
+\usepackage{anysize}
+\usepackage{multicol}
+\usepackage{enumerate}
+\usepackage{graphicx}
+\usepackage[left=1.5cm,top=2cm,right=1.5cm, bottom=1.7cm]{geometry}
+\setlength\headheight{1.5em} 
+\usepackage{fancyhdr}
+\usepackage{multicol}
+\usepackage{hyperref}
+\usepackage{wrapfig}
+\usepackage{subcaption}
+\usepackage{siunitx}
+\usepackage{cancel}
+\usepackage{mdwlist}
+\usepackage{svg}
+\pagestyle{fancy}
+\fancyhf{}
+\renewcommand{\labelenumi}{\normalsize\bfseries P\arabic{enumi}.}
+\renewcommand{\labelenumii}{\normalsize\bfseries (\alph{enumii})}
+\renewcommand{\labelenumiii}{\normalsize\bfseries \roman{enumiii})}
+
+
+\begin{document}
+
+\fancyhead[L]{\itshape{Facultad de Ciencias F\'isicas y Matem\'aticas}}
+\fancyhead[R]{\itshape{Universidad de Chile}}
+
+\begin{minipage}{11.5cm}
+    \begin{flushleft}
+        \hspace*{-0.6cm}\textbf{FI1000-1 Introducción a la Física Clásica}\\
+        \hspace*{-0.6cm}\textbf{Profesora:} Jocelyn Dunstan\\
+        \hspace*{-0.6cm}\textbf{Auxiliar:} Alejandro Silva\\
+        \hspace*{-0.6cm}\textbf{Ayudantes:} Macarena Muñoz \& Catalina Vargas\\
+    \end{flushleft}
+\end{minipage}
+
+\begin{picture}(2,3)
+    \svgpath{../}  % descomentar si se agrega a carpeta "auxiliares"/"ejercicios"
+    \put(366, 10){\includesvg[scale=0.31]{img/dfi.svg}}
+\end{picture}
+
+\begin{center}
+	\LARGE\textbf{Auxiliar \#5}\\
+	\Large{MCUA y Mov. Relativo}
+\end{center}
+
+\vspace{-1.0cm}
+\begin{enumerate}\setlength{\itemsep}{0.4cm}
+
+\rfoot[]{pág. \thepage}
+
+\item[]
+
+\item Un disco con un agujero a una distancia $R$ del centro está inicialmente en reposo. De repente, se lanza un proyectil verticalmente con velocidad $v_0$ de manera que pase por este agujero. Para que el proyectil logre caer en el mismo agujero, el disco comienza a girar con aceleración angular $\alpha$ constante inmediatamente cuando el proyectil pasa por este. Determine, en el instante en que el proyectil vuelve a pasar por el agujero:
+\begin{enumerate}
+    \item $\alpha$ y la velocidad angular del disco
+    
+    \item la velocidad tangencial y el tamaño de la aceleración total que posee el agujero
+\end{enumerate}
+
+\begin{figure}[H]
+    \centering
+    \svgpath{../img/aux5}
+    \includesvg[width=0.5\linewidth]{disco.svg}
+\end{figure}
+
+\item Considere la situación en la que usted va en un auto en una autopista a cierta velocidad $v_0$. En la autopista se encuentra con dos autos, uno que se mueve con velocidad $u_0 > v_0$ y otro que se mueve con velocidad $w_0 < v_0$. Determine las velocidades relativas a usted que poseen los autos. 
+
+\item Un auto avanza bajo la lluvia a una velocidad constante $v_0$. Las gotas de lluvia caen verticalmente respecto a la Tierra a una velocidad constante $u_0$. Debido al movimiento, vistas desde la ventana del auto, las gotas de lluvia parecen caer formando un ángulo $\alpha$ respecto a la vertical. Determine la velocidad $u_0$ con que caen las gotas de lluvia.
+
+\end{enumerate}
+\end{document}

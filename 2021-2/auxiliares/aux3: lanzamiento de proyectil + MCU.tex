@@ -1,0 +1,123 @@
+\documentclass[letterpaper,11pt]{article}
+\oddsidemargin -1.0cm \textwidth 17.5cm
+
+\usepackage[utf8]{inputenc}
+\usepackage[activeacute,spanish, es-lcroman]{babel}
+\decimalpoint
+\usepackage{amsfonts,setspace}
+\usepackage{amsmath}
+\usepackage{amssymb, amsmath, amsthm}
+\usepackage{comment}
+\usepackage{float}
+\usepackage{amssymb}
+\usepackage{dsfont}
+\usepackage{anysize}
+\usepackage{multicol}
+\usepackage{enumerate}
+\usepackage{graphicx}
+\usepackage[left=1.5cm,top=2cm,right=1.5cm, bottom=1.7cm]{geometry}
+\setlength\headheight{1.5em} 
+\usepackage{fancyhdr}
+\usepackage{multicol}
+\usepackage{hyperref}
+\usepackage{wrapfig}
+\usepackage{subcaption}
+\usepackage{siunitx}
+\usepackage{cancel}
+\usepackage{mdwlist}
+\usepackage{svg}
+\pagestyle{fancy}
+\fancyhf{}
+\renewcommand{\labelenumi}{\normalsize\bfseries P\arabic{enumi}.}
+\renewcommand{\labelenumii}{\normalsize\bfseries (\alph{enumii})}
+\renewcommand{\labelenumiii}{\normalsize\bfseries \roman{enumiii})}
+
+
+\begin{document}
+
+\fancyhead[L]{\itshape{Facultad de Ciencias F\'isicas y Matem\'aticas}}
+\fancyhead[R]{\itshape{Universidad de Chile}}
+
+\begin{minipage}{11.5cm}
+    \begin{flushleft}
+        \hspace*{-0.6cm}\textbf{FI1000-1 Introducción a la Física Clásica}\\
+        \hspace*{-0.6cm}\textbf{Profesora:} Jocelyn Dunstan\\
+        \hspace*{-0.6cm}\textbf{Auxiliar:} Alejandro Silva\\
+        \hspace*{-0.6cm}\textbf{Ayudantes:} Macarena Muñoz \& Catalina Vargas\\
+    \end{flushleft}
+\end{minipage}
+
+\begin{picture}(2,3)
+    \svgpath{../}  % descomentar si se agrega a carpeta "auxiliares"/"ejercicios"
+    \put(366, 10){\includesvg[scale=0.31]{img/dfi.svg}}
+\end{picture}
+
+\begin{center}
+	\LARGE\textbf{Auxiliar \#3}\\
+	\Large{Lanzamiento de Proyectil y MCU}
+\end{center}
+
+\vspace{-1cm}
+\begin{enumerate}\setlength{\itemsep}{0.4cm}
+
+\rfoot[]{pág. \thepage}
+
+\item[]
+
+\item Un volcán eyecta lava y rocas desde su cráter. Suponga que una roca es eyectada con una velocidad inicial \(v_0\) a un ángulo \(\theta\) con respecto a la horizontal como lo muestra la figura. La roca impacta el suelo a una altura de \(y_0\) por debajo del nivel que fue lanzada.
+    
+{
+    \begin{multicols}{2}
+    \begin{enumerate} 
+        \item Calcule el tiempo total de vuelo de la roca
+        \item Calcule la rapidez de la roca con la que impacta en el suelo
+    \end{enumerate}
+    \columnbreak
+    \begin{figure}[H]
+        \centering
+        \svgpath{../img/aux3}
+        \includesvg[width=0.8\linewidth]{volcan-p1.svg}
+    \end{figure}
+    \end{multicols}
+}
+
+
+\item Un anillo muy pequeño se hace girar con velocidad angular constante $\omega$ a lo largo de una circunferencia vertical de radio $R$. La circunferencia está cortada en un punto determinado por un ángulo $\theta = 30^{\circ}$, como se señala en la figura. Al alcanzar este punto, el anillo se desprende y continua en caída libre.
+    \begin{enumerate}
+        \item Calcule el valor de la velocidad angular $\omega$ si el anillo, luego de desprenderse, toca a la circunferencia precisamente en su punto más bajo $P$
+    
+        \item Para el caso anterior indique la velocidad y la rapidez del anillo cuando cruza el diámetro de la circunferencia (eje $x$)
+    \end{enumerate}
+    
+\item Dos tortugas comienzan una carrera desde el punto $A$. Una de ellas viaja en línea recta desde el punto $A$ hasta el punto $B$ con aceleración constante $a_0$, partiendo del reposo. La otra tortuga lo hace describiendo una semicircunferencia de radio $R$, moviéndose con rapidez constante. Si ambas llegan al mismo tiempo al punto $B$, ¿cuál es la velocidad angular $\omega$ de la segunda tortuga?
+    
+\begin{figure}[H]
+    \centering
+    \svgpath{../img/aux3}
+    \begin{subfigure}[t]{0.35\textwidth}
+        \centering
+        \includesvg[width=0.9\linewidth]{p2.svg}
+        \caption{Figura P2}
+    \end{subfigure}
+    \hspace{1em}
+    \begin{subfigure}[t]{0.35\textwidth}
+        \centering
+        \includesvg[width=1\linewidth]{carrera.svg}
+        \caption{Figura P3}
+    \end{subfigure}
+\end{figure}
+
+
+
+\item \textbf{[Propuesto]} Demuestre que para un proyectil disparado desde el suelo con un ángulo de lanzamiento \(\theta_0\) se cumple que:
+\[\frac{H}{R} = \frac{1}{4}\tan{\theta_0}\]
+donde $H$ es la altura máxima y $R$ es el alcance horizontal máximo
+% Para imágenes vectoriales -> el texto tiene que estar en LaTeX
+% \begin{figure}[htbp]
+%   \centering
+%   \svgpath{../Imagenes/ejercicios}  -> .. irse pa'trás 
+%   \includesvg{ej5.svg}
+% \end{figure}
+
+\end{enumerate}
+\end{document}

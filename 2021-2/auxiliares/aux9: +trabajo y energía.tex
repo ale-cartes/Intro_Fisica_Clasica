@@ -1,0 +1,110 @@
+\documentclass[letterpaper,11pt]{article}
+\oddsidemargin -1.0cm \textwidth 17.5cm
+
+\usepackage[utf8]{inputenc}
+\usepackage[activeacute,spanish, es-lcroman]{babel}
+\decimalpoint
+\usepackage{amsfonts,setspace}
+\usepackage{amsmath}
+\usepackage{amssymb, amsmath, amsthm}
+\usepackage{comment}
+\usepackage{float}
+\usepackage{amssymb}
+\usepackage{dsfont}
+\usepackage{anysize}
+\usepackage{multicol}
+\usepackage{enumerate}
+\usepackage{graphicx}
+\usepackage[left=1.5cm,top=2cm,right=1.5cm, bottom=1.7cm]{geometry}
+\setlength\headheight{1.5em} 
+\usepackage{fancyhdr}
+\usepackage{multicol}
+\usepackage{hyperref}
+\usepackage{wrapfig}
+\usepackage{subcaption}
+\usepackage{siunitx}
+\usepackage{cancel}
+\usepackage{mdwlist}
+\usepackage{svg}
+\pagestyle{fancy}
+\fancyhf{}
+\renewcommand{\labelenumi}{\normalsize\bfseries P\arabic{enumi}.}
+\renewcommand{\labelenumii}{\normalsize\bfseries (\alph{enumii})}
+\renewcommand{\labelenumiii}{\normalsize\bfseries \roman{enumiii})}
+
+
+\begin{document}
+
+\fancyhead[L]{\itshape{Facultad de Ciencias F\'isicas y Matem\'aticas}}
+\fancyhead[R]{\itshape{Universidad de Chile}}
+
+\begin{minipage}{11.5cm}
+    \begin{flushleft}
+        \hspace*{-0.6cm}\textbf{FI1000-1 Introducción a la Física Clásica}\\
+        \hspace*{-0.6cm}\textbf{Profesora:} Jocelyn Dunstan\\
+        \hspace*{-0.6cm}\textbf{Auxiliar:} Alejandro Silva\\
+        \hspace*{-0.6cm}\textbf{Ayudantes:} Macarena Muñoz \& Catalina Vargas\\
+    \end{flushleft}
+\end{minipage}
+
+\begin{picture}(2,3)
+    \svgpath{../}  % descomentar si se agrega a carpeta "auxiliares"/"ejercicios"
+    \put(366, 10){\includesvg[scale=0.31]{img/dfi.svg}}
+\end{picture}
+
+\begin{center}
+	\LARGE\textbf{Auxiliar \#9:}\\
+	\Large{Repaso}
+\end{center}
+
+\vspace{-1cm}
+\begin{enumerate}\setlength{\itemsep}{0.4cm}
+
+\rfoot[]{pág. \thepage}
+
+\item[]
+
+\item 
+\begin{multicols}{2}
+    Una partícula se mueve sobre una superficie inclinada con roce, atada al extremo de una cuerda de largo $L$ cuyo otro extremo está fijo en $O$, como se muestra en la figura. Determinar la velocidad mínima que debe tener la partícula al pasar por el punto más bajo de la trayectoria tal que llegue al punto más alto manteniendo la cuerda tensa.
+    
+    \columnbreak
+    
+    \begin{figure}[H]
+        \centering
+        \svgpath{../img/aux9}
+        \includesvg[width=0.7\linewidth]{p1.svg}
+    \end{figure}
+\end{multicols}
+
+\item
+\begin{multicols}{2}
+    Dos objetos se deslizan sin roce en un anillo circular de radio $R$ orientado verticalmente. El objeto más liviano de masa $m$ está unido a un resorte de largo natural nulo y constante elástica $k$. El otro extremo del resorte se ubica a una distancia horizontal $2R$ del centro de la circunferencia. El otro objeto de masa $3m$ está inicialmente en reposo en el punto más bajo del anillo. Si el objeto más liviano es soltado desde el punto más alto del anillo estando en reposo y luego choca con el bloque de masa $3m$, determine el valor de $m$ que permite que el objeto de masa $3m$ llegue al punto A y el bloque de masa $m$ llegue al punto $B$, sin que sigan subiendo. Considere una \textit{colisión elástica}.
+    \columnbreak
+    \begin{figure}[H]
+        \centering
+        \svgpath{../img/aux9}
+        \includesvg[width=1\linewidth]{p3.svg}
+    \end{figure}
+\end{multicols}    
+    
+% http://99.21.36.40/SAGITTARIUS/Course%208/8.01/Fall%202010/ps07sol.pdf para cons. momentum
+
+
+\item Un bloque de masa $m$ es eyectado por un resorte de constante elástica $k$. El bloque desliza por un tramo horizontal con roce y luego sube por un tramo lista una altura $H$ por determinar. Una vez que el cubo alcanza el punto más alto, este retorna y comprime el resorte en $\beta\Delta$, con $\Delta$ la compresión del resorte utilizada para eyectar el bloque. Determina la altura máxima $H$ de subida del bloque en el tramo indicado.
+
+\begin{figure}[H]
+    \centering
+    \svgpath{../img/aux9}
+    \includesvg[width=0.8\linewidth]{p2.svg}
+\end{figure}
+
+% Para imágenes vectoriales -> el texto tiene que estar en LaTeX
+% \begin{figure}[htbp]
+%   \centering
+%   \svgpath{../Imagenes/ejercicios}  -> .. irse pa'trás 
+%   \includesvg{ej5.svg}
+% \end{figure}
+
+\end{enumerate}
+\end{document}

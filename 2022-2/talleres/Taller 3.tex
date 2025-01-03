@@ -1,0 +1,131 @@
+\documentclass[letterpaper,11pt]{article}
+\oddsidemargin -1.0cm \textwidth 17.5cm
+
+\usepackage[utf8]{inputenc}
+\usepackage[activeacute,spanish, es-lcroman]{babel}
+\decimalpoint
+\usepackage{amsfonts,setspace}
+\usepackage{amsmath}
+\usepackage{amssymb, amsmath, amsthm}
+\usepackage{comment}
+\usepackage{float}
+\usepackage{amssymb}
+\usepackage{dsfont}
+\usepackage{anysize}
+\usepackage{multicol}
+\usepackage{enumerate}
+\usepackage{graphicx}
+\usepackage[left=1.5cm,top=2cm,right=1.5cm, bottom=1.7cm]{geometry}
+\setlength\headheight{1.5em} 
+\usepackage{fancyhdr}
+\usepackage{multicol}
+\usepackage{hyperref}
+\usepackage{wrapfig}
+\usepackage{subcaption}
+\usepackage{siunitx}
+\usepackage{cancel}
+\usepackage{mdwlist}
+\usepackage{svg}
+\pagestyle{fancy}
+\fancyhf{}
+\renewcommand{\labelenumi}{\normalsize\bfseries P\arabic{enumi}.}
+\renewcommand{\labelenumii}{\normalsize\bfseries (\alph{enumii})}
+\renewcommand{\labelenumiii}{\normalsize\bfseries \roman{enumiii})}
+
+% Vect unitarios
+\newcommand{\ihat}{\hat{\textbf{\i}}}
+\newcommand{\jhat}{\hat{\textbf{\j}}}
+\newcommand{\khat}{\hat{\textbf{k}}}
+
+
+\begin{document}
+
+\fancyhead[L]{\itshape{Facultad de Ciencias F\'isicas y Matem\'aticas}}
+\fancyhead[R]{\itshape{Universidad de Chile}}
+
+\begin{minipage}{11.5cm}
+    \begin{flushleft}
+        \hspace*{-0.6cm}\textbf{FI1000-1 Introducción a la Física Clásica}\\
+        \hspace*{-0.6cm}\textbf{Profesor:} Ignacio Bordeu\\
+        \hspace*{-0.6cm}\textbf{Auxiliares:} Javier Cubillos \& Berenice Muruaga\\
+        \hspace*{-0.6cm}\textbf{Auxiliares taller:} Pablo González \& Alejandro Cartes\\
+        \hspace*{-0.6cm}\textbf{Ayudante:} Amaru Moya\\
+    \end{flushleft}
+\end{minipage}
+
+\begin{picture}(2,3)
+    \put(366, 10){\includegraphics[scale=0.9]{2020-1/Imágenes/logo/dfi-fcfm.pdf}}
+\end{picture}
+
+\begin{center}
+	\LARGE\textbf{Taller \#3}\\
+	\Large{Análisis Dimensional, repaso de trigonometría y vectores}
+\end{center}
+
+\vspace{-1cm}
+\begin{enumerate}\setlength{\itemsep}{0.4cm}\addtocounter{enumi}{-1}
+
+\rfoot[]{pág. \thepage}
+
+\item[]
+
+
+\item \textbf{(Análisis dimensional)} 
+    \begin{enumerate}
+        \item La Ley de Gravitación Universal de Newton establece que la fuerza gravitacional entre dos masas, $m_1$ y $m_2$, separadas por una distancia $r$ está dada por la expresión $F = Gm_1m_2 / r^2$. ¿Cuáles son las unidades y dimensiones de $G$?
+        
+        \item De Relatividad Especial, se define el factor de Lorentz como $\gamma = (1-v^2/c^2)^{-1/2}$. ¿Qué unidad de medida tiene? 
+        
+        \item Compruebe si las siguientes expresiones son dimensionalmente correctas:
+            \begin{enumerate}
+                \item $x(t) = x_0 + v_0\cdot t^2 + 1/2 a \cdot t$
+                
+                \item Sabiendo que la energía cinética $K = 1/2 m v^2$ es una de las tantas formas en que las energía se manifiesta. ¿Podríamos tener entonces que $E=m^2 c^2$?
+            \end{enumerate}
+    \end{enumerate}
+
+\item \textbf{(Trigonometría)}
+\begin{multicols}{2}
+    Una tortuga se encuentra al pie de un cerro cuya inclinación es $\gamma$. Desde cierta posición avista, con un ángulo de elevación $\alpha$ respecto al piso, a su compañera tortuga que se encuentra en la punta de un poste vertical ubicado en la cima del cerro. Luego, la tortuga avanza una distancia $d$ en dirección al poste. En este lugar avista a su compañera con un ángulo de elevación $\beta$. Encuentre la altura $h$ del poste en el que se encuentra la compañera tortuga. Analice el caso $\gamma\rightarrow 0$
+    
+    \columnbreak
+    
+    \begin{figure}[H]
+        \centering
+        \svgpath{../../2021-2/img/aux1}
+        \includesvg[width=0.7\linewidth]{tortugas.svg}
+    \end{figure}
+
+\end{multicols}
+
+\item \textbf{(Vectores)}
+
+\begin{multicols}{2}
+
+\begin{enumerate}
+    \item Dados $\Vec{A} = (5, \ 120^{\circ})$, $\Vec{B} = -10 \ihat + 12 \jhat$, encontrar el vector $\Vec{C}$ de manera que se cumpla que $\Vec{A} + \Vec{B} + \Vec{C} = 0$.
+
+    \item Calcule el módulo del vector $\Vec{C}$, además del ángulo $\alpha$ entre el vector y el eje horizontal.
+
+    \item En la esquemática de la figura, descomponga el vector de peso del cuerpo en el sistema de referencia dado. Exprese cada componente del vector en términos de $\alpha$ y $\beta$, por separado.
+\end{enumerate}
+
+    \columnbreak
+    
+    \begin{figure}[H]
+        \centering
+        \includegraphics[width=0.6\linewidth]{2022-2/Imagenes/Taller3/p2.png}
+    \end{figure}
+    
+\end{multicols}
+
+
+% Para imágenes vectoriales -> el texto tiene que estar en LaTeX
+% \begin{figure}[htbp]
+%   \centering
+%   \svgpath{../Imagenes/ejercicios}  -> .. irse pa'trás 
+%   \includesvg{ej5.svg}
+% \end{figure}
+
+\end{enumerate}
+\end{document}

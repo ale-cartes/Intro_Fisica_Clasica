@@ -1,0 +1,469 @@
+\documentclass[letterpaper,11pt]{article}
+\oddsidemargin -1.0cm \textwidth 17.5cm
+
+\usepackage[utf8]{inputenc}
+\usepackage[activeacute,spanish, es-lcroman]{babel}
+\decimalpoint
+\usepackage{amsfonts,setspace}
+\usepackage{amsmath}
+\usepackage{amssymb, amsmath, amsthm}
+\usepackage{comment}
+\usepackage{float}
+\usepackage{amssymb}
+\usepackage{dsfont}
+\usepackage{anysize}
+\usepackage{multicol}
+\usepackage{enumerate}
+\usepackage{graphicx}
+\usepackage[left=1.5cm,top=2cm,right=1.5cm, bottom=1.7cm]{geometry}
+\setlength\headheight{1.5em} 
+\usepackage{fancyhdr}
+\usepackage{multicol}
+\usepackage{hyperref}
+\usepackage{wrapfig}
+\usepackage{subcaption}
+\usepackage{siunitx}
+\usepackage{cancel}
+\usepackage{mdwlist}
+\usepackage{tcolorbox}
+\usepackage{svg}
+\usepackage{stackengine}
+\usepackage{scalerel}
+\usepackage{mathtools}
+\usepackage[misc]{ifsym}
+
+\pagestyle{fancy}
+\fancyhf{}
+
+\renewcommand{\labelenumi}{\normalsize\bfseries P\arabic{enumi}.}
+\renewcommand{\labelenumii}{\normalsize\bfseries (\alph{enumii})}
+\renewcommand{\labelenumiii}{\normalsize\bfseries \roman{enumiii})}
+
+\newcommand\warning[1][2ex]{%
+  \renewcommand\stacktype{L}%
+  \scaleto{\stackon[1.3pt]{\color{red}$\triangle$}{\tiny !}}{#1}%
+}
+
+\begin{document}
+\graphicspath{{../2020-1/}}  % pa que compile las imágenes
+
+% \fancyhead[L]{\itshape{Facultad de Ciencias F\'isicas y Matem\'aticas}}
+% \fancyhead[R]{\itshape{Universidad de Chile}}
+
+\begin{center}
+	\LARGE \textbf{Resumen: Intro. a la Física Clásica}\\ %posible resumen
+	\small{Alejandro Cartes\\
+	\small{\href{mailto:alejandroml.cartes@gmail.com}{\Letter: alejandroml.cartes@gmail.com}}}
+\end{center}
+
+\begin{picture}(2,3)
+    \svgpath{../2021-2}  % descomentar si se agrega a carpeta "auxiliares"
+    \put(415, 35){\includesvg[scale=0.21]{img/dfi.svg}}
+\end{picture}
+
+\rfoot[]{pág. \thepage}
+
+\vspace{-3em}
+\section{Cinemática}
+Cinemática es una rama de la física que estudia cómo se realiza el movimiento, no el porqué de este. \newline 
+Dado un sistema de referencia, se definen los siguientes vectores para describir el movimiento de una partícula puntual:
+
+% \begin{multicols}{2}
+%     \begin{figure}[H]
+%         \centering
+%         \includesvg[width=0.6\linewidth]{img/res IFC/cin - sis ref.svg}
+%     \end{figure}
+    
+%     \columnbreak
+    
+%     \begin{itemize}
+%         \item $\vec{r}(t)$: vector posición \newline        
+%         Vector que, dado un sistema de referencia, indica la ubicación de la partícula.\newline
+%         En el caso tridimensional, el vector se puede representar como:
+%         \[\vec{r}(t) = \left(x(t), y(t), z(t)\right) = x(t)\hat{x} + y(t)\hat{y} + z(t)\hat{z}\]
+%     \end{itemize}
+% \end{multicols}
+
+\vspace{1em}
+\noindent
+\begin{minipage}{0.65\textwidth}
+    \begin{itemize}
+        \item $\vec{r}(t)$: vector posición \newline        
+        Vector que, dado un sistema de referencia, indica la ubicación de la partícula.\newline
+        En el caso tridimensional, el vector se puede representar como:
+        \[\vec{r}(t) = \left(x(t), y(t), z(t)\right) = x(t)\hat{x} + y(t)\hat{y} + z(t)\hat{z}\]
+
+        \item $\vec{v}(t)$: vector velocidad \newline
+        Se define como la tasa de cambio del vector posición con respecto al tiempo
+        \[\vec{v} \equiv \frac{\Delta \vec{r}}{\Delta t}\]
+    \end{itemize}
+\end{minipage}
+\hfill
+\begin{minipage}{0.3\textwidth}
+    \begin{figure}[H]
+        \centering
+        \includesvg[width=1.0\linewidth]{img/res IFC/cin - sis ref.svg}
+    \end{figure}
+\end{minipage}
+
+
+\begin{itemize}
+        \item $\vec{a}(t)$: vector aceleración \newline
+        Se define como la tasa de cambio del vector velocidad con respecto al tiempo
+        \[\vec{a}(t) \equiv \frac{\Delta \vec{v}}{\Delta t}\]
+\end{itemize}
+
+ \noindent Se pueden seguir definiendo vectores como la variación de cierto vector con respecto al tiempo, por ejemplo la variación del vector aceleración y así sucesivamente, pero en este curso se estudiarán solo casos en donde la aceleración es constante por intervalos. Por lo que podremos describir movimientos utilizando solo estos 3 vectores que se relacionan entre sí mediante las siguientes ecuaciones:
+
+\begin{multicols}{2}
+    \begin{center}
+        \begin{tcolorbox}[colback=white, colframe=blue, width=0.45\textwidth]
+            \begin{itemize}
+                \item Ec. de Itinerario: \[\vec{r}(t) = \vec{r}_0 + \vec{v}_0 t + \frac{1}{2} \vec{a} t^2\]
+                \item Ec. de Velocidad: \[\vec{v}(t) = \vec{v}_0 + \vec{a}t\]
+                \item Ec. de Torricelli: \[v_{\text{f}}^2 - v_{\text{i}}^2 = 2 \vec{a}\cdot\Delta\vec{r}\]
+            \end{itemize}
+        \end{tcolorbox}
+    \end{center}
+    \columnbreak
+    En donde:
+    \begin{itemize}
+    \setlength\itemsep{0.3em}
+        \item $\vec{r}_0$: posición inicial, i.e, $\vec{r}(t=0)$
+        \item $\vec{v}_0$: velocidad inicial, i.e, $\vec{v}(t=0)$
+        \item $\vec{a}$: aceleración \textbf{constante} en el intervalo temporal a estudiar
+        \item $\Delta\vec{r} \equiv \vec{r}_{\text{f}} - \vec{r}_{\text{i}}$ : vector desplazamiento
+    \end{itemize}
+\end{multicols}
+
+\noindent \warning[3ex] La ecuación de Torricelli posee una ligera sutileza, pues se define con un producto entre vectores llamado \textbf{producto punto} que se verá más adelante en el curso. \newline
+Esta ecuación puede ser muy útil al ser \textbf{independiente del tiempo}, pero hay que tener cuidado, pues si la aceleración es en cierta dirección, solo nos entregará información de lo que pasa a lo largo de esta. \newline Una demostración de esta expresión para el caso unidimensional se logra al despejar el tiempo en la ec. de velocidad para luego reemplazarlo en la ec. de itinerario.
+
+\subsection*{Caída libre}
+\label{caida libre}
+\hspace{-2em}
+\begin{minipage}{0.85\textwidth}
+    \setlength{\parindent}{15pt} Movimiento unidimensional en la dirección vertical donde la aceleración corresponde a la aceleración de gravedad, es decir, $\vec{a} = \vec{g}$. \newline
+    Si definimos la dirección $\hat{y}$ positiva hacia arriba, entonces: $\vec{g} = g(-\hat{y}) = -g\hat{y}$ ($\color{blue} -$ pues apunta hacia abajo, en sentido opuesto a nuestra dirección positiva).
+\end{minipage}
+\hfill
+\begin{minipage}{0.1\textwidth}
+    \begin{figure}[H]
+        \centering
+        \includesvg[width=1\linewidth]{img/res IFC/cin - g.svg}
+    \end{figure}
+\end{minipage}
+
+\noindent Dada la elección de dirección positiva, nuestras ecuaciones tomarán la siguiente forma:
+
+\begin{center}
+    \begin{minipage}{0.1\textwidth}
+        \begin{figure}[H]
+            \centering
+            \includesvg[width=1\linewidth]{img/res IFC/cin - arriba.svg}
+        \end{figure}
+    \end{minipage}
+    \hspace{1em}
+    \begin{minipage}{0.\textwidth}
+        \begin{align*}
+            & y(t) = y_0 {\color{blue}+} v_0t {\color{blue}-} \frac{1}{2}gt^2 \\
+            & v(t) = {\color{blue}+} v_0 {\color{blue}-} gt
+        \end{align*}
+    \end{minipage}
+    \hspace{2em}
+    \vline
+    \hspace{2em}
+    \begin{minipage}{0.1\textwidth}
+        \begin{figure}[H]
+            \centering
+            \includesvg[width=1\linewidth]{img/res IFC/cin - abajo.svg}
+        \end{figure}
+    \end{minipage}
+    \hspace{1em}
+    \begin{minipage}{0.\textwidth}
+        \begin{align*}
+            & y(t) = y_0 {\color{blue}-} v_0t {\color{blue}-} \frac{1}{2}gt^2 \\
+            & v(t) = {\color{blue}-} v_0 {\color{blue}-} gt
+        \end{align*}
+    \end{minipage}
+\end{center}
+
+\noindent Consideremos el caso de la izquierda, en donde una masa es lanzada con una velocidad inicial hacia arriba a una altura $y_0$ inicial. Con las ecuaciones planteadas podemos encontrar algunas expresiones:
+
+\begin{itemize}
+    \begin{minipage}{0.7\linewidth}
+        \item Tiempo de vuelo $t_v$: tiempo en que la masa vuelve a la altura inicial
+        \begin{align*}
+            & y(t_v) = y_0 + v_0 t_v -\frac{1}{2} g t_v^2 \stackrel{!}{=} y_0 \\
+            \Rightarrow \quad & 0 = t_v\left(v_0 - \frac{1}{2} g t_v\right) \quad {\color{blue}\therefore} \hspace{0.5em} t_v = \frac{2v_0}{g} \hspace{1em} \vee \hspace{1em} {\color{blue}\cancelto{t_v\neq 0}{\color{black} t_v = 0}}
+        \end{align*}
+    \end{minipage}
+    \hspace{1em}
+    \begin{minipage}{0.25\linewidth}
+        \begin{figure}[H]
+            \centering
+            \includesvg[width=1.0\linewidth]{img/res IFC/cin - y(t).svg}
+        \end{figure}
+    \end{minipage}
+    
+    \item Tiempo de subida $t_s$: tiempo en que la masa alcanza la altura máxima\newline
+    En la altura máxima la velocidad debe ser nula, pues en caso contrario, estaría subiendo o bajando
+    \begin{align*}
+        v(t_s)=v_0 - gt_s \stackrel{!}{=} 0 \quad \Rightarrow \quad t_s = \frac{v_0}{g}
+    \end{align*}
+    
+    Notar que $t_s = t_v/2$. Esto se debe a la simetría temporal que posee el comportamiento parabólico de $y(t)$ con respecto al tiempo.
+    
+    \item Altura máxima $y_{\text{max}}$
+    \begin{align*}
+        y_{\text{max}} = y(t_s) = y_0 + v_0 t_s - \frac{1}{2} g t_s^2 = y_0 + \frac{v_0^2}{g} - \frac{1}{2}\frac{v_0^2}{g} \quad {\color{blue} \therefore} \hspace{0.5em} y_{\text{max}} = y_0 + \frac{1}{2}\frac{v_0^2}{g}
+    \end{align*}
+\end{itemize}
+
+\subsection*{Lanzamiento de Proyectil}
+Movimiento bidimensional en el cual la partícula está bajo los efectos de la aceleración de gravedad en la dirección vertical y aceleración nula en la dirección horizontal
+
+\begin{minipage}{0.3\linewidth}
+    \begin{figure}[H]
+        \centering
+        \includesvg[width=1.0\linewidth]{img/res IFC/cin - proyectil.svg}
+    \end{figure}
+\end{minipage}
+\hfill
+\begin{minipage}{0.65\linewidth}
+    \begin{itemize}
+        \item $\mathbf{\hat{x}}| a_x=0 \text{ (MRU): }$
+        \begin{align*}
+            x(t) = x_0 + v_{0x}t \quad, & \quad v_x(t) = v_{0x}
+        \end{align*}
+
+        \item $\mathbf{\hat{y}}|$ $a_y = -g \text{ (MRUA): }$
+        \begin{align*}
+            y(t) = y_0+v_{0y}t-\frac{1}{2}gt^2 \quad, & \quad v_y(t) = v_{0y} - gt
+        \end{align*}
+    \end{itemize}
+\end{minipage}
+
+\noindent Con trigonometría podemos determinar una expresión para las componentes de la velocidad:
+\begin{align*}
+    \left.
+    \begin{array}{lr}
+      \cos\theta = \cfrac{v_{0x}}{v_0} \quad \Rightarrow \quad v_{0x} = v_0 \cos\theta\\
+      \sin\theta = \cfrac{v_{0y}}{v_0} \quad \Rightarrow \quad v_{0y} = v_0 \sin\theta
+    \end{array}\right\} \vec{v}_0 = v_{0x}\hat{x} + v_{0y}\hat{y} = v_0\cos\theta\hat{x} + v_0\sin\theta\hat{y}
+\end{align*}
+
+\noindent Con este en mente, consideremos las siguientes condiciones temporales:
+\[\mathbf{\hat{x}}| \hspace{1em} x(t=0) = 0 , \quad x(t=t_v)=R \qquad - \qquad \mathbf{\hat{y}}| \hspace{1em} y(t=0) = y_0 , \quad y(t=t_v)=y_0\]
+
+\noindent Al trabajar con las ecuaciones de la dirección vertical $\hat{y}$ e imponer las condiciones temporales, se llegarán a las expresiones analizadas en la sección de \nameref{caida libre}:
+
+\[t_v = \frac{2v_0\sin\theta}{g} ,\quad t_s = \frac{v_0\sin\theta}{g}, \quad y_{\text{max}} = y_0 + \frac{1}{2}\frac{v_0^2\sin^2\theta}{g}\]
+
+\noindent De esta forma, podemos determinar una expresión para el alcance horizontal $R$
+
+\begin{minipage}{0.65\linewidth}
+    \[R = x(t_v) = v_0\cos\theta t_v = \frac{2v_0^2\cos\theta\sin\theta}{g} \underset{\substack{\color{blue}\uparrow \\ \mathclap{\textup{\tiny $\sin{(2\theta)}=$}}\\ 
+    \mathclap{\textup{\tiny $2\sin\theta\cos\theta$}}}} {=}\frac{v_0^2\sin{(2\theta)}}{g}\]
+\end{minipage}
+\hfill
+\begin{minipage}{0.3\linewidth}
+    \begin{tcolorbox}[colback=white, colframe=blue, width=1\textwidth]
+        Notar que R se maximiza cuando $\theta=45^{\circ} = \pi/4$
+    \end{tcolorbox}
+\end{minipage}
+
+\subsection*{Movimiento Circular Uniforme}
+\label{MCU}
+\hspace{-2em}
+\begin{minipage}{0.65\linewidth}
+    \setlength{\parindent}{15pt}
+    Movimiento bidimensional en el cual la partícula está restringida a moverse en una trayectoria circular. El carácter uniforme se debe a una característica adicional en este movimiento: recorrer distancias iguales en intervalos de tiempos iguales.
+    \newline Para describir este movimiento se introducen las siguientes definiciones:
+
+    \noindent
+    \begin{minipage}{0.5\linewidth}
+        \begin{itemize}
+            \item Frecuencia: $f \equiv\dfrac{\text{n$^{\circ}$ de vueltas}}{\text{tiempo}}$
+    
+            \item Periodo: $T \equiv \dfrac{\text{tiempo}}{\text{n$^{\circ}$ de vueltas}}$
+        \end{itemize}
+    \end{minipage}
+    \begin{minipage}{0.5\linewidth}
+        \vspace{1em}
+        \begin{tcolorbox}[colback=white, colframe=blue, width=1\linewidth]
+            Notar que $f$ y $T$ son \textbf{inversamente proporcionales}:
+            \begin{center}$f=1/T \qquad T=1/f$\end{center}
+        \end{tcolorbox}
+    \end{minipage}
+\end{minipage}
+\hfill
+\begin{minipage}{0.3\linewidth}
+    \begin{figure}[H]
+        \centering
+        \includesvg[width=0.85\linewidth]{img/res IFC/cin - mcu.svg}
+    \end{figure}
+\end{minipage}
+
+\noindent Dada las caracterísitcas de este movimiento, los vectores cinemáticos pueden adaptarse de mejor manera para describir la circunferencia:
+
+\begin{itemize}
+    \item El vector posición: $\vec{r}(t) = R \hat{r}$
+    \newline con R el radio de la circunferencia y $\hat{r}$ la dirección unitaria radial, que apunta del centro hacia afuera
+
+    \item El vector velocidad: $\vec{v} = v_t \hat{t}$
+    \newline Considerando $R$ constante, la velocidad no puede poseer componentes a lo largo de la dirección $\hat{r}$, pues si así fuera, el radio aumentaría o disminuiría. Por tal motivo, la velocidad en un MCU es \textbf{perpendicular a $\mathbf{\hat{r}}$} (o equivalentemente, al vector posición), denominándose así \textbf{velocidad tangencial}.
+
+    \newline Como el movimiento es uniforme, \textbf{el tamaño de este vector (la rapidez) es constante}:
+    \begin{center}
+        \begin{minipage}{0.3\linewidth}
+            \begin{align*}
+                \left|\vec{v}\right| = v_t = \frac{\text{dist.}}{\text{t}} \underset{\substack{\color{blue}\uparrow \\ \mathclap{\textup{\tiny 1 vuelta}}}} {=} \frac{\text{Perímetro}}{T} \quad \color{blue}\Rightarrow
+            \end{align*}
+        \end{minipage}
+        \hspace{0.5em}
+        \begin{minipage}{0.26\linewidth}
+            \begin{tcolorbox}[colback=white, colframe=blue, width=1\linewidth]
+                \vspace{-1.1em}
+                \begin{align*}
+                    v_t = \frac{2\pi R }{T} = 2\pi R f
+                \end{align*}
+            \end{tcolorbox}
+        \end{minipage}
+    \end{center}
+
+    \newline Es importante notar que el vector $\vec{v}$ \textbf{no} es constante, pues su dirección va cambiando.
+
+    \item Velocidad angular: $\vec{\omega}$
+    \newline Vector que caracteriza el giro cuya dirección es perpendicular al plano del movimiento y su sentido está dado por regla de la mano derecha (se discutirá con más profundidad en mecánica). El tamaño de este vector, la rapidez angular, es análoga a la rapidez, centrándose en el ángulo
+    \begin{center}
+        \begin{minipage}{0.20\linewidth}
+            \begin{align*}
+                \omega = \frac{\Delta \theta}{\text{t}} \underset{\substack{\color{blue}\uparrow \\ \mathclap{\textup{\tiny 1 vuelta}}}} {=} \frac{360^{\circ}}{T} \quad \color{blue}\Rightarrow
+            \end{align*}
+        \end{minipage}
+        \hspace{0.5em}
+        \begin{minipage}{0.2\linewidth}
+            \begin{tcolorbox}[colback=white, colframe=blue, width=1\linewidth]
+                \vspace{-1.1em}
+                \begin{align*}
+                    \omega = \frac{2\pi}{T} = 2\pi f
+                \end{align*}
+            \end{tcolorbox}
+        \end{minipage}
+    \end{center}
+    
+    \item[] Es importante notar la relación que existe entre la rapidez tangencial y la rapidez angular:
+    \begin{center}
+        \begin{tcolorbox}[colback=white, colframe=blue, width=0.2\linewidth]
+            \vspace{-1.5em}
+            \begin{align*}
+                v_t = \omega R
+            \end{align*}
+        \end{tcolorbox}
+    \end{center}
+
+    \item Aceleración: $\vec{a} = -a_c\hat{r}$
+    \newline Como el vector velocidad varía, entonces la partícula tiene que estar acelerando.
+
+    \begin{itemize}
+        \begin{minipage}{0.65\linewidth}
+            \item Dirección: \textbf{el vector aceleración es perpendicular al vector velocidad}, pues si tuviera una componente paralela a la velocidad, la rapidez tangencial dejaría de ser constante.
+            
+            Ahora, por definición $\vec{a} \propto \Delta \vec{v}$, por lo que su dirección está dada por el vector $\Delta \vec{v}$.
+
+            Al tomar intervalos temporales pequeños, se puede mostrar de forma gráfica que el vector $\Delta\vec{v}$ apunta hacia al centro, i.e., $\Delta\vec{v}~\propto~\left(-\hat{r}\right)$. De esta manera:
+            \begin{center}
+                \begin{tcolorbox}[colback=white, colframe=blue, width=0.25\linewidth]
+                    \vspace{-1.5em}
+                    \begin{align*}
+                        \vec{a} \propto \left(-\hat{r}\right)
+                    \end{align*}
+                \end{tcolorbox}
+            \end{center}
+
+            Es por este motivo que esta aceleración se le denomina \textbf{aceleración centrípeta $\mathbf{a_c}$}, pues apunta hacia el centro de la circunferencia.
+        \end{minipage}
+        \hspace{1em}
+        \begin{minipage}{0.3\linewidth}
+            \begin{figure}[H]
+                \centering
+                \includesvg[width=1\linewidth]{img/res IFC/cin - ac.svg}
+            \end{figure}
+            \vfill{}
+        \end{minipage}
+
+        \item Tamaño: notemos que la aceleración se puede interpretar como \textit{la velocidad que posee el vector velocidad}, en donde el tamaño de este vector (la rapidez $v$) no varía. Dado este enfoque, notemos que podemos hacer una analogía con la velocidad que posee el vector posición, donde también el tamaño de este vector no varía ($R$). Dicho esto:
+        \begin{center}
+            \begin{minipage}{0.3\linewidth}
+                \vspace{-1.1em}
+                \begin{align*}
+                    v = \frac{2\pi R}{T} \longrightarrow a_c = \frac{2\pi v}{T} \color{blue}\Rightarrow
+                    % \left|\vec{v}\right| = v_t = \frac{\text{dist.}}{\text{t}} \underset{\substack{\color{blue}\uparrow \\ \mathclap{\textup{\tiny 1 vuelta}}}} {=} \frac{\text{Perímetro}}{T} \quad \color{blue}\Rightarrow
+                \end{align*}
+            \end{minipage}
+            \begin{minipage}{0.26\linewidth}
+                \begin{tcolorbox}[colback=white, colframe=blue, width=1\linewidth]
+                    \vspace{-1.1em}
+                    \begin{align*}
+                        a_c = \omega v \underset{\substack{\color{blue}\uparrow \\ \mathclap{\textup{\tiny $v=\omega R$}}}} {=} \omega^2 R = \frac{v^2}{R}
+                    \end{align*}
+                \end{tcolorbox}
+            \end{minipage}
+        \end{center}
+        Cabe destacar que la demostración formal utiliza el concepto de derivada, herramienta con la cual aún no se cuenta para este curso.
+    \end{itemize}
+\end{itemize}
+
+% \subsection*{Movimiento Circular Uniformemente Acelerado}
+
+% En la sección anterior de \nameref{MCU} se tenía como característica que la rapidez tangencial es constante, pero ¿qué pasa si deja de serlo? En esa situación estaríamos en presencia de un MCUA.
+% \newline Si el radio de giro se mantiene constante, 
+
+% \subsection*{Movimiento Relativo}
+
+% \section{Dinámica}
+
+% Dinámica es una rama de la física que estudia el porqué del movimiento. En este curso se aborda el esquema de Newton, el cual establece 3 leyes e introduce el concepto de \textbf{fuerza}:
+
+% \begin{itemize}
+%     \item $1^{\circ}$ Ley: Inercia
+%     \newline Todo cuerpo permanecerá con velocidad constante (reposo o MRU), a menos que una fuerza externa actúe sobre este.
+
+%     \item $2^{\circ}$ Ley: Fuerza
+%     \newline Si el cuerpo posee masa constante, la fuerza neta aplicada sobre este es proporcional a la aceleración que adquiere en su trayectoria, siendo su masa la constante de proporcionalidad.
+%     \[\vec{F}_n = m\vec{a}\]
+    
+%     \item $3^{\circ}$ Ley: Acción-Reacción (interacción)
+%     \newline Toda acción genera una reacción de igual tamaño, pero en sentido opuesto.
+%     \begin{center}
+%         \begin{minipage}[t]{0.3\linewidth}
+%             \begin{figure}[H]
+%                 \centering
+%                 \includesvg[width=0.8\linewidth]{img/res IFC/din - 3ra ley.svg}
+%             \end{figure}
+%         \end{minipage}
+%         \begin{minipage}[t]{0.3\linewidth}
+%             \begin{align*}
+%                 &\vec{F}_{12} = - \vec{F}_{21}\\
+%                 &\text{Notación: }\vec{F}_{ij} \text{ fuerza que ejerce $i$ sobre $j$}
+%             \end{align*}
+%         \end{minipage}
+%     \end{center}
+% \end{itemize}
+
+% \noindent A lo largo de esta unidad se estudian distintos tipos de fuerza, cuyos comportamientos son distintos entre sí:
+
+% \begin{itemize}
+%     \item Fuerza Peso
+%     \item Fuerza Normal
+%     \item Tensión
+%     \item Roce
+%     \item Ley de Hooke
+% \end{itemize}
+
+% \section{Trabajo y Energía}
+
+% \section{Sistema de Partículas}
+
+\end{document}

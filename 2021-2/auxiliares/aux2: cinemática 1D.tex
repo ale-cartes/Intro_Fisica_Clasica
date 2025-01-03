@@ -1,0 +1,137 @@
+\documentclass[letterpaper,11pt]{article}
+\oddsidemargin -1.0cm \textwidth 17.5cm
+
+\usepackage[utf8]{inputenc}
+\usepackage[activeacute,spanish, es-lcroman]{babel}
+\decimalpoint
+\usepackage{amsfonts,setspace}
+\usepackage{amsmath}
+\usepackage{amssymb, amsmath, amsthm}
+\usepackage{comment}
+\usepackage{float}
+\usepackage{amssymb}
+\usepackage{dsfont}
+\usepackage{anysize}
+\usepackage{multicol}
+\usepackage{enumerate}
+\usepackage{graphicx}
+\usepackage[left=1.5cm,top=2cm,right=1.5cm, bottom=1.7cm]{geometry}
+\setlength\headheight{1.5em} 
+\usepackage{fancyhdr}
+\usepackage{multicol}
+\usepackage{hyperref}
+\usepackage{wrapfig}
+\usepackage{subcaption}
+\usepackage{siunitx}
+\usepackage{cancel}
+\usepackage{mdwlist}
+\usepackage{svg}
+\pagestyle{fancy}
+\fancyhf{}
+\renewcommand{\labelenumi}{\normalsize\bfseries P\arabic{enumi}.}
+\renewcommand{\labelenumii}{\normalsize\bfseries (\alph{enumii})}
+\renewcommand{\labelenumiii}{\normalsize\bfseries \roman{enumiii})}
+
+
+\begin{document}
+
+\fancyhead[L]{\itshape{Facultad de Ciencias F\'isicas y Matem\'aticas}}
+\fancyhead[R]{\itshape{Universidad de Chile}}
+
+\begin{minipage}{11.5cm}
+    \begin{flushleft}
+        \hspace*{-0.6cm}\textbf{FI1000-1 Introducción a la Física Clásica}\\
+        \hspace*{-0.6cm}\textbf{Profesora:} Jocelyn Dunstan\\
+        \hspace*{-0.6cm}\textbf{Auxiliar:} Alejandro Silva\\
+        \hspace*{-0.6cm}\textbf{Ayudantes:} Macarena Muñoz \& Catalina Vargas\\
+    \end{flushleft}
+\end{minipage}
+
+\begin{picture}(2,3)
+    \svgpath{../}  % descomentar si se agrega a carpeta "auxiliares"/"ejercicios"
+    \put(366, 10){\includesvg[scale=0.31]{img/dfi.svg}}
+\end{picture}
+
+\begin{center}
+	\LARGE\textbf{Auxiliar \#2}\\
+	\Large{Cinemática en 1D}
+\end{center}
+
+\vspace{-1cm}
+\begin{enumerate}\setlength{\itemsep}{0.4cm}
+
+\rfoot[]{pág. \thepage}
+
+\item[]
+
+\item Una partícula se mueve a lo largo del eje $x$. En el tiempo $t=0$, la partícula se encuentra en $x=0$. La velocidad de la partícula cambia en función del tiempo como se muestra en el gráfico. Determine:
+
+{
+    \begin{multicols}{2}
+        \begin{enumerate}
+            
+            \item La posición en $t=\SI{1}{\second}$
+            
+            \item La aceleración en $t=\SI{2}{\second}$
+            
+            \item La posición en $t=\SI{4}{\second}$
+            
+            \item La velocidad promedio entre $t=\SI{0}{\second}$ y $t=\SI{3}{\second}$
+            
+            \item La aceleración instantánea en $t=\SI{1}{\second}$ y en $t=\SI{3}{\second}$. ¿Es posible este movimiento físicamente?
+        \end{enumerate}
+        
+        \columnbreak
+        
+        \begin{figure}[H]
+            \centering
+            \svgpath{../img/aux2}
+            \includesvg[width=0.77\linewidth]{plot.svg}
+        \end{figure}
+    \end{multicols}
+}
+
+\item Dos vehículos parten de un mismo lugar y deben recorrer una distancia total $L$. El vehículo $A$ parte del reposo y recorrer la mitad del camino ($3L/4$) con aceleración constante $a_0$, y luego mantiene la velocidad final alcanzada, recorriendo la segunda mitad del camino con velocidad constante. Si el vehículo $B$ hace todo el recorrido a velocidad constante, determine a qué velocidad debe viajar para llegar al mismo instante que $A$ al final del trayecto.
+
+\begin{figure}[H]
+    \centering
+    \svgpath{../img/aux2} 
+    \includesvg[width=0.65\linewidth]{auto.svg}
+\end{figure}
+
+\item
+
+{
+    \begin{multicols}{2}
+        Una bola de acero se deja caer desde el techo de un edificio. Un observador parado frente a una ventana de altura $h$ nota que la bola cruza la ventana en $\tau$ segundos. La bola continua cayendo hasta chocar en forma completamente elástica con el piso (es decir, el módulo de su velocidad no cambia) y reaparece en la parte baja de la ventana $\tau_0$ segundos después. Demuestre que la altura del edificio está dada por la siguiente expresión:
+        
+        \centering{$H = \cfrac{g}{8}\left(\tau_0 + \tau + \cfrac{2h}{\tau g}\right)^2$}
+        
+        \columnbreak
+        
+        \begin{figure}[H]
+            \centering
+            \svgpath{../img/aux2}
+            \includesvg[width=0.6\linewidth]{sus.svg}
+        \end{figure}
+        
+    \end{multicols}
+}
+
+\item \textbf{[Propuesto]} Dos autos (A y B) avanzan juntos por una calle, ambos con velocidad constante $v$. Cuando ambos autos están a distancia $L$ de un cruce se prende la luz amarilla del semáforo. El auto $A$ empieza a frenar con aceleración constante a modo de detenerse justo en el cruce. En tanto, el auto $B$ mantiene su velocidad. Transcurrido un tiempo $t_1$ desde que la luz cambió a amarilla, el semáforo cambia a rojo y entonces el auto $B$ empieza a frenar con aceleración constante para detenerse justo en el cruce (el auto $A$ sigue con aceleración que ya traía). Ambos autos se detienen exactamente en el mismo lugar.
+
+\begin{enumerate}
+    \item Muestre que es imposible que se detengan al mismo tiempo
+    
+    \item Grafique la posición y la velocidad de ambos autos en función del tiempo
+\end{enumerate}
+
+% Para imágenes vectoriales -> el texto tiene que estar en LaTeX
+% \begin{figure}[htbp]
+%   \centering
+%   \svgpath{../Imagenes/ejercicios}  -> .. irse pa'trás 
+%   \includesvg{ej5.svg}
+% \end{figure}
+
+\end{enumerate}
+\end{document}

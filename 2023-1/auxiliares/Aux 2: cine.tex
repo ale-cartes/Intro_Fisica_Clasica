@@ -1,0 +1,121 @@
+\documentclass[letterpaper,11pt]{article}
+\oddsidemargin -1.0cm \textwidth 17.5cm
+
+\usepackage[utf8]{inputenc}
+\usepackage[activeacute,spanish, es-lcroman]{babel}
+\decimalpoint
+\usepackage{amsfonts,setspace}
+\usepackage{amsmath}
+\usepackage{amssymb, amsmath, amsthm}
+\usepackage{comment}
+\usepackage{float}
+\usepackage{amssymb}
+\usepackage{dsfont}
+\usepackage{anysize}
+\usepackage{multicol}
+\usepackage{enumerate}
+\usepackage{graphicx}
+\usepackage[left=1.5cm,top=2cm,right=1.5cm, bottom=1.7cm]{geometry}
+\setlength\headheight{1.5em} 
+\usepackage{fancyhdr}
+\usepackage{multicol}
+\usepackage{hyperref}
+\usepackage{wrapfig}
+\usepackage{subcaption}
+\usepackage{siunitx}
+\usepackage{cancel}
+\usepackage{mdwlist}
+\usepackage{svg}
+\pagestyle{fancy}
+\fancyhf{}
+\renewcommand{\labelenumi}{\normalsize\bfseries P\arabic{enumi}.}
+\renewcommand{\labelenumii}{\normalsize\bfseries (\alph{enumii})}
+\renewcommand{\labelenumiii}{\normalsize\bfseries \roman{enumiii})}
+
+
+\begin{document}
+
+\fancyhead[L]{\itshape{Facultad de Ciencias F\'isicas y Matem\'aticas}}
+\fancyhead[R]{\itshape{Universidad de Chile}}
+
+\begin{minipage}{11.5cm}
+    \begin{flushleft}
+        \hspace*{-0.6cm}\textbf{FI1000-1 Introducción a la Física Clásica}\\
+        \hspace*{-0.6cm}\textbf{Profesor:} Ignacio Bordeu\\
+        \hspace*{-0.6cm}\textbf{Auxiliares:} Alejandro Cartes \& Simón Yáñez\\
+        \hspace*{-0.6cm}\textbf{Ayudante:} Javier Cubillos\\
+    \end{flushleft}
+\end{minipage}
+
+\begin{picture}(2,3)
+    \put(366, 10){\includegraphics[scale=0.9]{2020-1/Imágenes/logo/dfi-fcfm.pdf}}
+\end{picture}
+
+\begin{center}
+	\LARGE\textbf{Auxiliar \#2}\\
+	\Large{Cinemática 1D y 2D}
+\end{center}
+
+\vspace{-1cm}
+\begin{enumerate}\setlength{\itemsep}{0.4cm}
+
+\rfoot[]{pág. \thepage}
+
+\item[]
+
+\item  \textbf{[\textit{C1 - Otoño 2022}]} Era la noche más oscura en Gotham, la luna comenzaba a esconderse en el horizonte
+y el plan maestro de dos súper criminales iba a ser perpetrado. El plan consistía en asaltar
+uno de los más grandes bancos de la ciudad, cuyas arcas estaban compuestas por grandes
+fortunas de diferentes multimillonarios. Luego de perpetrar exitosamente el robo, el líder y
+su cómplice se disponían a huir rumbo a un auto que los esperaba frente al asilo Arkham,
+muchos metros más allá. En $t = 0$, el líder comenzó a correr con una velocidad de $v_l$ hacia la
+derecha, mientras que su cómplice, mucho más lento por su falta de forma, a una velocidad
+$v_c$ ($v_l > v_c$), también hacia la derecha. En un tiempo $t = T$, luego del aviso desesperado
+de Jim Gordon, Batman aterriza heroicamente en el banco, con su capa flameante al viento
+y rodilla al piso. Este se abalanza sobre los ladrones, partiendo desde el banco y desde el
+reposo, con una aceleración constante $a_b$. Tras una vertiginosa persecución, Batman captura
+fácilmente al cómplice, quien le suplicaba perdón, mientras que en ese mismo instante lanza
+un grito ensordecedor al líder, ordenándole detenerse. Un fuerte escalofrío recorrió la espalda
+del líder, afectando sus piernas, desacelerando con aceleración constante y deteniéndose luego
+de avanzar una distancia $d_0$ desde que escuchó el grito.
+
+
+\begin{enumerate}
+    \item Represente, en un mismo gráfico, la posición de ambos malhechores y de Batman en
+función del tiempo. Indique claramente cuál curva representa al líder de los malhechores,
+cuál representa a su cómplice, y cuál representa a Batman.
+    \item ¿A qué tiempo $t_2$ Batman logra alcanzar al cómplice, desde que los malhechores
+comienzan a escapar?
+    \item ¿A qué distancia del banco se encuentran Batman y cada uno de los malhechores
+cuando Batman da alcance al cómplice?
+    \item ¿Qué aceleración $a$ tiene el líder luego de que que Batman le ordena detenerse?
+    \item ¿A qué tiempo $t_3$ se detuvo el líder, desde que comenzó su escapatoria?
+\end{enumerate}
+
+\newpage
+
+\item Michael Scott quiere probar si puede saltar en una cama elástica desde un edificio sin hacerse daño. Para aquello lanza una sandía con velocidad $v_1$ en un ángulo $\theta$ desde el techo de Dunder Mifflin Inc. Prontamente se da cuenta que la caída es sumamente peligrosa cuando observa la sandía salir eyectada con velocidad $v_2$ y ángulo $\alpha$ desde la cama elástica destruyendo el auto de Stanley. ($H,h_s,l_1$ y $h_a$ también son datos del problema)
+
+\begin{figure}[H]
+    \centering
+        \centering
+        \svgpath{../../2023-1/img/aux_2}
+        \includesvg[width=0.8\textwidth]{Dunder_Mifflin.svg}
+\end{figure}
+
+\begin{enumerate}
+    \item Encuentre el tiempo $t_1$ en el que la sandía toca la cama elástica y la velocidad $v_1$ con la que fue lanzada. 
+    \item Despeje una expresión para $\alpha$ sabiendo que $v_2 = v(t_1)$ en función de los datos del problema. ($v(t_1)$ es la velocidad final del primer tramo)
+    \item Finalmente, encuentre la distancia desde el impacto con el trampolín al auto de Stanley.
+\end{enumerate}
+
+
+% Para imágenes vectoriales -> el texto tiene que estar en LaTeX
+% \begin{figure}[htbp]
+%   \centering
+%   \svgpath{../Imagenes/ejercicios}  -> .. irse pa'trás 
+%   \includesvg{ej5.svg}
+% \end{figure}
+
+\end{enumerate}
+\end{document}

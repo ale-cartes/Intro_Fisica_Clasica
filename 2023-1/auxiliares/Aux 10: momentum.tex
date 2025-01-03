@@ -1,0 +1,122 @@
+\documentclass[letterpaper,11pt]{article}
+\oddsidemargin -1.0cm \textwidth 17.5cm
+
+\usepackage[utf8]{inputenc}
+\usepackage[activeacute,spanish, es-lcroman]{babel}
+\decimalpoint
+\usepackage{amsfonts,setspace}
+\usepackage{amsmath}
+\usepackage{amssymb, amsmath, amsthm}
+\usepackage{comment}
+\usepackage{float}
+\usepackage{amssymb}
+\usepackage{dsfont}
+\usepackage{anysize}
+\usepackage{multicol}
+\usepackage{enumerate}
+\usepackage{graphicx}
+\usepackage[left=1.5cm,top=2cm,right=1.5cm, bottom=1.7cm]{geometry}
+\setlength\headheight{1.5em} 
+\usepackage{fancyhdr}
+\usepackage{multicol}
+\usepackage{hyperref}
+\usepackage{wrapfig}
+\usepackage{subcaption}
+\usepackage{siunitx}
+\usepackage{cancel}
+\usepackage{mdwlist}
+\usepackage{svg}
+\pagestyle{fancy}
+\fancyhf{}
+\renewcommand{\labelenumi}{\normalsize\bfseries P\arabic{enumi}.}
+\renewcommand{\labelenumii}{\normalsize\bfseries (\alph{enumii})}
+\renewcommand{\labelenumiii}{\normalsize\bfseries \roman{enumiii})}
+
+
+\begin{document}
+
+\fancyhead[L]{\itshape{Facultad de Ciencias F\'isicas y Matem\'aticas}}
+\fancyhead[R]{\itshape{Universidad de Chile}}
+\rfoot[]{pág. \thepage}
+
+\begin{minipage}{11.5cm}
+    \begin{flushleft}
+        \hspace*{-0.6cm}\textbf{FI1000-1 Introducción a la Física Clásica}\\
+        \hspace*{-0.6cm}\textbf{Profesor:} Ignacio Bordeu\\
+        \hspace*{-0.6cm}\textbf{Auxiliares:} Alejandro Cartes \& Simón Yáñez\\
+        \hspace*{-0.6cm}\textbf{Ayudante:} Javier Cubillos\\
+    \end{flushleft}
+\end{minipage}
+
+\begin{picture}(2,3)
+    \put(366, 10){\includegraphics[scale=0.9]{2020-1/Imágenes/logo/dfi-fcfm.pdf}}
+\end{picture}
+
+\begin{center}
+	\LARGE\textbf{Auxiliar \#10}\\
+	\Large{Conservación de Momentum Lineal}
+\end{center}
+
+\vspace{-1cm}
+\begin{enumerate}\setlength{\itemsep}{0.4cm}
+
+\item[]
+
+\item Un proyectil de masa $m_0$ se mueve a una velocidad $v_0$ y explota en dos fragmentos de masas $m_a$ y $m_b$, respectivamente. Inmediatamente después de la explosión se mueven en las direcciones indicadas. ¿Cuál es la velocidad de cada fragmento?
+
+\begin{figure}[htbp]
+  \centering
+  \svgpath{../../2023-1/img/aux_10}
+  \includesvg[width=0.65\linewidth]{Aux 10 - P1.svg}
+\end{figure}
+
+\item Un bloque de masa $m$ se dirige hacia la derecha a velocidad $v_a$ por una superficie lisa. Colisiona con otro bloque de masa $M$ que se dirige a la izquierda a velocidad $v_b$. La colisión es \textbf{inelástica} y el coeficiente de restitución es $r = \frac{3}{4}$.
+
+\begin{enumerate}
+    \item Determinar las velocidades de los bloques después de la colisión.
+    \item Hallar la pérdida de energía en la colisión.
+    \item Resolver a) desde el punto de vista del centro de masas.
+\end{enumerate}
+\begin{figure}[H]
+  \centering
+  \svgpath{../../2023-1/img/aux_10}
+  \includesvg[width=0.65\linewidth]{Aux 10 - P2.svg}
+\end{figure}
+
+\item Considere un péndulo consistente de una masa $m$ colgada de un hilo de largo $L$. Suponga que el péndulo inicialmente parte con el hilo en posición horizontal. Al llegar la masa al punto inferior (punto \textbf{O} de la figura), choca elásticamente con una masa $M = 2m$ que se mueve con velocidad $v_0$ como indica la figura. El péndulo rebota (hacia atrás) llegando a su misma posición inicial.
+
+\begin{figure}[htbp]
+  \centering
+  \svgpath{../../2023-1/img/aux_10}
+  \includesvg[width=0.7\linewidth]{Aux 10 - P3.svg}
+\end{figure}
+
+\begin{enumerate}
+    \item Encuentre la rapidez inicial $v_0$ en función de $m$, $M$, $L$ y $g$.
+    \item Encuentre la velocidad de $M$ después del choque.
+\end{enumerate}
+
+\item \textbf{[C3 - Otoño 2022]} Considere una nave espacial de masa $M$ y un atronauta de masa $m$ (incluye traje y equipo), inicialmente en reposo con el astronauta dentro de la nave. En un cierto instante el astronauta debe salir de la nave y se impulsa hacia la derecha con rapidez $v_0$.
+
+\begin{figure}[htbp]
+  \centering
+  \svgpath{../../2023-1/img/aux_10}
+  \includesvg[width=0.7\linewidth]{Aux 10 - P4.svg}
+\end{figure}
+
+\begin{enumerate}
+    \item Calcula la rapidez con la que la nave espacial se mueve luego que el astronauta la abandona.
+    \item Luego que el astronauta se ha movido una cierta distancia de la nave, decide volver. Si el astronauta tiene una pistola con una única bala de masa $m_b$ que puede disparar con rapidez $v_b$ con respecto al astronauta, calcule la masa $m_b$ de tal forma que el astronauta pueda volver a su nave. Comente respecto a los casos límite en que $v_b \gg v_0$ y $v_b = v_0$.
+\end{enumerate}
+    
+
+
+% Para imágenes vectoriales -> el texto tiene que estar en LaTeX
+% \begin{figure}[htbp]
+%   \centering
+%   \svgpath{../Imagenes/ejercicios}  -> .. irse pa'trás 
+%   \includesvg{ej5.svg}
+% \end{figure}
+
+\end{enumerate}
+\end{document}

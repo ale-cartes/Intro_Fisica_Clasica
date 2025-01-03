@@ -1,0 +1,114 @@
+\documentclass[letterpaper,11pt]{article}
+\oddsidemargin -1.0cm \textwidth 17.5cm
+
+\usepackage[utf8]{inputenc}
+\usepackage[activeacute,spanish, es-lcroman]{babel}
+\decimalpoint
+\usepackage{amsfonts,setspace}
+\usepackage{amsmath}
+\usepackage{amssymb, amsmath, amsthm}
+\usepackage{comment}
+\usepackage{float}
+\usepackage{amssymb}
+\usepackage{dsfont}
+\usepackage{anysize}
+\usepackage{multicol}
+\usepackage{enumerate}
+\usepackage{graphicx}
+\usepackage[left=1.5cm,top=2cm,right=1.5cm, bottom=1.7cm]{geometry}
+\setlength\headheight{1.5em} 
+\usepackage{fancyhdr}
+\usepackage{multicol}
+\usepackage{hyperref}
+\usepackage{wrapfig}
+\usepackage{subcaption}
+\usepackage{siunitx}
+\usepackage{cancel}
+\usepackage{mdwlist}
+\usepackage{svg}
+\pagestyle{fancy}
+\fancyhf{}
+\renewcommand{\labelenumi}{\normalsize\bfseries P\arabic{enumi}.}
+\renewcommand{\labelenumii}{\normalsize\bfseries (\alph{enumii})}
+\renewcommand{\labelenumiii}{\normalsize\bfseries \roman{enumiii})}
+
+
+\begin{document}
+
+\fancyhead[L]{\itshape{Facultad de Ciencias F\'isicas y Matem\'aticas}}
+\fancyhead[R]{\itshape{Universidad de Chile}}
+
+\begin{minipage}{11.5cm}
+    \begin{flushleft}
+        \hspace*{-0.6cm}\textbf{FI1000-6 Introducción a la Física Clásica}\\
+        \hspace*{-0.6cm}\textbf{Profesora:} Paulina Lira\\
+        \hspace*{-0.6cm}\textbf{Auxiliares:} Juan Cristóbal Castro \& Alejandro Silva\\
+        \hspace*{-0.6cm}\textbf{Ayudantes:} Francisca Bórquez, Catalina Molina \& Erick Pérez\\
+        
+    \end{flushleft}
+\end{minipage}
+
+\begin{picture}(2,3)
+    \put(366, 10){\includegraphics[scale=0.9]{2020-1/Imágenes/logo/dfi-fcfm.pdf}}
+\end{picture}
+
+\begin{center}
+	\LARGE\textbf{Auxiliar \#8}\\
+\end{center}
+
+\vspace{-1cm}
+\begin{enumerate}\setlength{\itemsep}{0.4cm}
+
+\rfoot[]{pág. \thepage}
+
+\item[]
+
+\item  . Durante el vuelo el loro mantiene una rapidez constante $u$ y su viaje total tiene una duración $T$. Determine la distancia del pescador a la isla cuando el loro retorna al bote. ¿Qué pasa cuando $V\sim0$ y $V\sim u$?
+
+\begin{figure}[htbp]
+  \centering
+  \svgpath{../Imagenes/aux8}
+  \includesvg[width=0.35\linewidth]{bote.svg}
+\end{figure}
+
+\item Una pelota se desliza (sin roce) sobre el techo liso de una casa que forma un ángulo de $\pi/4$ respecto a la horizontal. La pelota parte del reposo desde el punto más alto del techo a una altura de $2H$, donde $H$ es la altura de las murallas de la casa.
+    \begin{enumerate}
+        \item Determine la velocidad de la pelota al momento de desprenderse del techo. Para ello, determine la componente de la aceleración de gravedad que es paralela al techo de la casa.
+        
+        \item Determine la distancia a la muralla que la pelota cae al suelo.
+    \end{enumerate}
+
+\begin{figure}[H]
+    \centering
+    \svgpath{../Imagenes/aux8/}
+    \begin{subfigure}[t]{0.45\textwidth}
+        \includesvg[width=0.7\linewidth]{casa.svg}
+        \caption*{Figura P2}
+    \end{subfigure}
+    \hspace{0.1em}
+    \begin{subfigure}[t]{0.45\textwidth}
+        \includesvg[width=0.85\linewidth]{guia.svg}
+        \caption*{Figura P3}
+    \end{subfigure}
+\end{figure}
+
+\item Una masa $m$ se encuentra apoyada sobre una cuña de masa $M$ y ángulo de elevación $\alpha$. La cuña se puede desplazar horizontalmente sin roce sobre un plano. Dos guías restringen el movimiento de la masa $m$ de manera que sea solo en dirección vertical. No hay roce entre la masa $m$ y la cuña como tampoco entre las guías y la masa $m$.
+\begin{enumerate}
+    
+    \item Haga los diagramas de cuerpo libre de la masa $m$ y de la cuña $M$
+    
+    \item Encuentre la relación que existe entre la aceleración vertical $a_m$ de la masa $m$ y la aceleración horizontal $a_M$ de la cuña
+    
+\end{enumerate}
+
+
+
+% Para imágenes vectoriales -> el texto tiene que estar en LaTeX
+% \begin{figure}[htbp]
+%   \centering
+%   \svgpath{../Imagenes/ejercicios}  -> .. irse pa'trás 
+%   \includesvg{ej5.svg}
+% \end{figure}
+
+\end{enumerate}
+\end{document}

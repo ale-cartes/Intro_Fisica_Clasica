@@ -1,0 +1,101 @@
+\documentclass[letterpaper,11pt]{article}
+\oddsidemargin -1.0cm \textwidth 17.5cm
+
+\usepackage[utf8]{inputenc}
+\usepackage[activeacute,spanish, es-lcroman]{babel}
+\decimalpoint
+\usepackage{amsfonts,setspace}
+\usepackage{amsmath}
+\usepackage{amssymb, amsmath, amsthm}
+\usepackage{comment}
+\usepackage{float}
+\usepackage{amssymb}
+\usepackage{dsfont}
+\usepackage{anysize}
+\usepackage{multicol}
+\usepackage{enumerate}
+\usepackage{graphicx}
+\usepackage[left=1.5cm,top=2cm,right=1.5cm, bottom=1.7cm]{geometry}
+\setlength\headheight{1.5em} 
+\usepackage{fancyhdr}
+\usepackage{multicol}
+\usepackage{hyperref}
+\usepackage{wrapfig}
+\usepackage{subcaption}
+\usepackage{siunitx}
+\usepackage{cancel}
+\usepackage{mdwlist}
+\usepackage{svg}
+\pagestyle{fancy}
+\fancyhf{}
+\renewcommand{\labelenumi}{\normalsize\bfseries P\arabic{enumi}.}
+\renewcommand{\labelenumii}{\normalsize\bfseries (\alph{enumii})}
+\renewcommand{\labelenumiii}{\normalsize\bfseries \roman{enumiii})}
+
+
+\begin{document}
+
+\fancyhead[L]{\itshape{Facultad de Ciencias F\'isicas y Matem\'aticas}}
+\fancyhead[R]{\itshape{Universidad de Chile}}
+
+\begin{minipage}{11.5cm}
+    \begin{flushleft}
+        \hspace*{-0.6cm}\textbf{FI1000-1 Introducción a la Física Clásica}\\
+        \hspace*{-0.6cm}\textbf{Profesor:} Ignacio Bordeu\\
+        \hspace*{-0.6cm}\textbf{Auxiliares:} Alejandro Cartes \& Simón Yáñez\\
+        \hspace*{-0.6cm}\textbf{Ayudante:} Javier Cubillos\\
+    \end{flushleft}
+\end{minipage}
+
+\begin{picture}(2,3)
+    \put(366, 10){\includegraphics[scale=0.9]{2020-1/Imágenes/logo/dfi-fcfm.pdf}}
+\end{picture}
+
+\begin{center}
+	\LARGE\textbf{Auxiliar \#4}\\
+	\Large{MCUA y Leyes de Newton}
+\end{center}
+
+\vspace{-1cm}
+\begin{enumerate}\setlength{\itemsep}{0.4cm}
+
+\rfoot[]{pág. \thepage}
+
+\item[]
+
+\item Dos masas $m_1$ y $m_2$ describen dos movimientos circunferenciales concéntricos uniformemente acelerados por $\alpha _1$ y $\alpha _2$ respectivamente. Existe un ángulo $\theta _o$ entre $m_1$ y $m_2$ al iniciar su movimiento desde el reposo. Las circunferencias que describen poseen un radio $R$ y $r$ como se describe en la figura.
+%(y) 
+\begin{figure}[H]
+    \centering
+    \svgpath{../../2023-1/img/aux_4}
+    \hspace{1em}
+    \includesvg[width=0.8\textwidth]{aux_4_p1.svg}
+\end{figure}
+
+\begin{enumerate}
+    \item Calcule el tiempo que toma dar $N$ revoluciones para cada masa. ¿Cómo se comporta el tiempo de revolución gráficamente?
+    \item Encuentre la relación que cumplen las aceleraciones si $m_1$ hace 3 revoluciones por cada 2 de $m_2$
+    \item Considerando $\theta _o = \frac{7\pi}{8}$. Exprese el ángulo $\beta$ que forma $m_2$ respecto a $m_1$ para toda revolución de $m_1$. Evalué en $N=9$
+    \item Si ambos ejes soportan la misma tensión máxima equivalente a la que se produce en la novena revolución para $m_1$. ¿Cuál es la relación entre las masas?
+    \item A la revolución anterior, ambas masas se sueltan y describen un movimiento parabólico. Entregue la condición para que $m_1$ observe a $m_2$ en reposo para la dirección horizontal.
+\end{enumerate}
+\newpage
+\item Los bloques $M_1$ y $M_2$ de masa con el mismo nombre, se deslizan hacia abajo de un plano inclinado fijo de ángulo $\theta$ como se indica en la figura. El bloque $M_2$ esta apoyado (no pegado) sobre el bloque $M_1$. Los coeficientes de roce dinámico entre el bloque $M_1$ y el plano y entre el bloque $M_2$ y el plano valen $\mu_1$ y $\mu_2$ respectivamente. Determine la aceleración común de los dos bloques y la magnitud de la fuerza $F_1$ que $M_2$ ejerce sobre $M_1$. Discuta los movimientos posibles del conjunto y las condiciones que se deben cumplir para que exista la fuerza $\vec{F_1}$.
+
+\begin{figure}[H]
+    \centering
+    \svgpath{../../2023-1/img/aux_4}
+    \hspace{1em}
+    \includesvg[width=0.8\textwidth]{aux_4_p2.svg}
+\end{figure}
+
+
+% Para imágenes vectoriales -> el texto tiene que estar en LaTeX
+% \begin{figure}[htbp]
+%   \centering
+%   \svgpath{../Imagenes/ejercicios}  -> .. irse pa'trás 
+%   \includesvg{ej5.svg}
+% \end{figure}
+
+\end{enumerate}
+\end{document}

@@ -1,0 +1,105 @@
+\documentclass[letterpaper,11pt]{article}
+\oddsidemargin -1.0cm \textwidth 17.5cm
+
+\usepackage[utf8]{inputenc}
+\usepackage[activeacute,spanish, es-lcroman]{babel}
+\decimalpoint
+\usepackage{amsfonts,setspace}
+\usepackage{amsmath}
+\usepackage{amssymb, amsmath, amsthm}
+\usepackage{comment}
+\usepackage{float}
+\usepackage{amssymb}
+\usepackage{dsfont}
+\usepackage{anysize}
+\usepackage{multicol}
+\usepackage{enumerate}
+\usepackage{graphicx}
+\usepackage[left=1.5cm,top=2cm,right=1.5cm, bottom=1.7cm]{geometry}
+\setlength\headheight{1.5em} 
+\usepackage{fancyhdr}
+\usepackage{multicol}
+\usepackage{hyperref}
+\usepackage{wrapfig}
+\usepackage{subcaption}
+\usepackage{siunitx}
+\usepackage{cancel}
+\usepackage{mdwlist}
+\usepackage{svg}
+\pagestyle{fancy}
+\fancyhf{}
+\renewcommand{\labelenumi}{\normalsize\bfseries P\arabic{enumi}.}
+\renewcommand{\labelenumii}{\normalsize\bfseries (\alph{enumii})}
+\renewcommand{\labelenumiii}{\normalsize\bfseries \roman{enumiii})}
+
+
+\begin{document}
+
+\fancyhead[L]{\itshape{Facultad de Ciencias F\'isicas y Matem\'aticas}}
+\fancyhead[R]{\itshape{Universidad de Chile}}
+
+\begin{minipage}{11.5cm}
+    \begin{flushleft}
+        \hspace*{-0.6cm}\textbf{FI1000-6 Introducción a la Física Clásica}\\
+        \hspace*{-0.6cm}\textbf{Profesora:} Paulina Lira\\
+        \hspace*{-0.6cm}\textbf{Auxiliares:} Juan Cristóbal Castro \& Alejandro Silva\\
+        \hspace*{-0.6cm}\textbf{Ayudantes:} Francisca Bórquez, Catalina Molina \& Erick Pérez\\
+        
+    \end{flushleft}
+\end{minipage}
+
+\begin{picture}(2,3)
+    \put(366, 10){\includegraphics[scale=0.9]{2020-1/Imágenes/logo/dfi-fcfm.pdf}}
+\end{picture}
+
+\begin{center}
+	\LARGE\textbf{Auxiliar \#7}\\
+	\Large{Roce}
+\end{center}
+
+\vspace{-1cm}
+\begin{enumerate}\setlength{\itemsep}{0.4cm}
+
+\rfoot[]{pág. \thepage}
+
+\item[]
+
+\item Sobre un plano inclinado liso, que forma un ángulo $\theta$ con la horizontal, se desliza un bloque partiendo del reposo. Después de recorrer una distancia $D$, el bloque entra en un tramo rugoso. El bloque se detiene luego de recorrer una distancia $D$ en dicho tramo. Calcule el coeficiente de roce (¿cinético o estático?) entre el bloque y la superficie rugosa.
+
+\begin{figure}[h]
+    \centering
+    \svgpath{../Imagenes/aux7/}
+    \includesvg[width=0.4\linewidth]{preg.svg}
+    \caption*{Figura P1}
+\end{figure}
+
+\item Una carretera está peraltada de modo que un automóvil, desplazándose a una rapidez $v=$ \SI{80}{\km/\hour}, puede tomar la curva de $R=$ \SI{30}{m} de radio, incluso si existe una capa de hielo equivalente a un coeficiente de fricción aproximadamente cero. Con esto determine el ángulo de inclinación $\theta$.
+
+Determine el intervalo de velocidades a que un automóvil puede tomar esta curva sin patinar si los coeficientes de roce estático y cinemático, entre la carretera y las ruedas, son $\mu_e = 0.3$ y $\mu_c = 0.26$ respectivamente.
+
+\begin{figure}[H]
+    \centering
+    \svgpath{../Imagenes/aux7/}
+    \begin{subfigure}[t]{0.45\textwidth}
+        \includesvg[width=0.8\linewidth]{p2.svg}
+        \caption*{Figura P2}
+    \end{subfigure}
+    \hspace{0.5em}
+    \begin{subfigure}[t]{0.40\textwidth}
+        \includesvg[width=0.85\linewidth]{p3.svg}
+        \caption*{Figura P3}
+    \end{subfigure}
+\end{figure}
+
+\item ¿Cuál es el máximo valor que puede tener $m_3$ para que $m_1$ no se caiga? Considere el coeficiente de roce estático entre $m_1$ y $m_2$ igual a $\mu_e$ y los dos coeficientes de roce cinemático (entre $m_2$ y el plano horizontal, y entre $m_3$ y el plano inclinado) iguales a $\mu_c$.
+
+
+% Para imágenes vectoriales -> el texto tiene que estar en LaTeX
+% \begin{figure}[htbp]
+%   \centering
+%   \svgpath{../Imagenes/ejercicios}  -> .. irse pa'trás 
+%   \includesvg{ej5.svg}
+% \end{figure}
+
+\end{enumerate}
+\end{document}

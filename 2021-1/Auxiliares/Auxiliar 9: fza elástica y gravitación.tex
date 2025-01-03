@@ -1,0 +1,111 @@
+\documentclass[letterpaper,11pt]{article}
+\oddsidemargin -1.0cm \textwidth 17.5cm
+
+\usepackage[utf8]{inputenc}
+\usepackage[activeacute,spanish, es-lcroman]{babel}
+\decimalpoint
+\usepackage{amsfonts,setspace}
+\usepackage{amsmath}
+\usepackage{amssymb, amsmath, amsthm}
+\usepackage{comment}
+\usepackage{float}
+\usepackage{amssymb}
+\usepackage{dsfont}
+\usepackage{anysize}
+\usepackage{multicol}
+\usepackage{enumerate}
+\usepackage{graphicx}
+\usepackage[left=1.5cm,top=2cm,right=1.5cm, bottom=1.7cm]{geometry}
+\setlength\headheight{1.5em} 
+\usepackage{fancyhdr}
+\usepackage{multicol}
+\usepackage{hyperref}
+\usepackage{wrapfig}
+\usepackage{subcaption}
+\usepackage{siunitx}
+\usepackage{cancel}
+\usepackage{mdwlist}
+\usepackage{svg}
+\pagestyle{fancy}
+\fancyhf{}
+\renewcommand{\labelenumi}{\normalsize\bfseries P\arabic{enumi}.}
+\renewcommand{\labelenumii}{\normalsize\bfseries (\alph{enumii})}
+\renewcommand{\labelenumiii}{\normalsize\bfseries \roman{enumiii})}
+
+
+\begin{document}
+
+\fancyhead[L]{\itshape{Facultad de Ciencias F\'isicas y Matem\'aticas}}
+\fancyhead[R]{\itshape{Universidad de Chile}}
+
+\begin{minipage}{11.5cm}
+    \begin{flushleft}
+        \hspace*{-0.6cm}\textbf{FI1000-6 Introducción a la Física Clásica}\\
+        \hspace*{-0.6cm}\textbf{Profesora:} Paulina Lira\\
+        \hspace*{-0.6cm}\textbf{Auxiliares:} Juan Cristóbal Castro \& Alejandro Silva\\
+        \hspace*{-0.6cm}\textbf{Ayudantes:} Francisca Bórquez, Catalina Molina \& Erick Pérez\\
+        
+    \end{flushleft}
+\end{minipage}
+
+\begin{picture}(2,3)
+    \put(366, 10){\includegraphics[scale=0.9]{2020-1/Imágenes/logo/dfi-fcfm.pdf}}
+\end{picture}
+
+\begin{center}
+	\LARGE\textbf{Auxiliar \#9}\\
+	\Large{Fuerza elástica y Gravitación}
+\end{center}
+
+\vspace{-1cm}
+\begin{enumerate}\setlength{\itemsep}{0.4cm}
+
+\rfoot[]{pág. \thepage}
+
+\item[]
+
+\item En presencia de la gravedad terrestre, una bolita de masa $m$ es sostenida mediante un resorte de constante elástica $k$ y longitud natural $L$. El conjunto se dispone dentro de un tubo de paredes lisas inclinado en un ángulo $\beta$ con respecto a la vertical. El tubo se hace girar con velocidad angular constante $\omega$ y la bolita mantiene una trayectoria circunferencial. El extremo superior $Q$ del resorte se ubica en el eje de rotación. Determine la elongación $\Delta$ del resorte y discuta la posibilidad de que $\Delta = 0$
+
+\item Cuatro partículas idénticas de masa $m$ se unen mediante resortes idénticos de masa nula, constante elástica $k$ y longitud natural $L$. El sistema toma la forma cuadrada de la figura mientras rota en torno a su centro con velocidad angular $\omega$. Calcule la elongación experimentada por los resortes.
+
+\begin{figure}[H]
+    \centering
+    \svgpath{../Imagenes/aux9/}
+    \begin{subfigure}[t]{0.45\textwidth}
+        \centering
+        \includesvg[width=0.8\linewidth]{resorte1.svg}
+        \caption*{Figura P1}
+    \end{subfigure}
+    \hspace{0.1em}
+    \begin{subfigure}[t]{0.45\textwidth}
+        \centering
+        \includesvg[width=0.5\linewidth]{cuadrao.svg}
+        \caption*{Figura P2}
+    \end{subfigure}
+\end{figure}
+
+
+\item Dos planetas de masas $m_1$ y $m_2$ giran en órbitas circulares de radio $r_1$ y $r_2$ respectivamente, en torno a un astro de masa $M >> m_1 \& m_2$. Un resorte de constante elástica $k$ une ambos planetas haciendo que giren con el mismo periodo. Despreciando la interacción gravitacional entre las masas pequeñas, determine una expresión para $k$. Considere que el resorte posee masa despreciable y largo natural nulo.
+
+\item Tres satélites idénticos de masa $m$ experimentan órbitas circunferenciales de igual radio $R$ cuando se ordenan en una configuración triangular equilátera. Al centro de las órbitas se ubica un planeta de masa $M$. Sin despreciar la interacción gravitacional entre los satélites, determine la rapidez con que estos orbitan.
+
+\begin{figure}[H]
+    \centering
+    \svgpath{../Imagenes/aux9/}
+    \begin{subfigure}[t]{0.45\textwidth}
+        \centering
+        \includesvg[width=0.55\linewidth]{resorte-planeta.svg}
+        \caption*{Figura P3}
+    \end{subfigure}
+    \hspace{0.1em}
+    \begin{subfigure}[t]{0.45\textwidth}
+        \centering
+        \includesvg[width=0.65\linewidth]{equilat.svg}
+        \caption*{Figura P4}
+    \end{subfigure}
+\end{figure}
+
+
+
+\end{enumerate}
+\end{document}

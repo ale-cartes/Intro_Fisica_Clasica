@@ -1,0 +1,131 @@
+\documentclass[letterpaper,11pt]{article}
+\oddsidemargin -1.0cm \textwidth 17.5cm
+
+\usepackage[utf8]{inputenc}
+\usepackage[activeacute,spanish, es-lcroman]{babel}
+\decimalpoint
+\usepackage{amsfonts,setspace}
+\usepackage{amsmath}
+\usepackage{amssymb, amsmath, amsthm}
+\usepackage{comment}
+\usepackage{float}
+\usepackage{amssymb}
+\usepackage{dsfont}
+\usepackage{anysize}
+\usepackage{multicol}
+\usepackage{enumerate}
+\usepackage{graphicx}
+\usepackage[left=1.5cm,top=2cm,right=1.5cm, bottom=1.7cm]{geometry}
+\setlength\headheight{1.5em} 
+\usepackage{fancyhdr}
+\usepackage{multicol}
+\usepackage{hyperref}
+\usepackage{wrapfig}
+\usepackage{subcaption}
+\usepackage{siunitx}
+\usepackage{cancel}
+\usepackage{mdwlist}
+\usepackage{svg}
+\pagestyle{fancy}
+\fancyhf{}
+\renewcommand{\labelenumi}{\normalsize\bfseries P\arabic{enumi}.}
+\renewcommand{\labelenumii}{\normalsize\bfseries (\alph{enumii})}
+\renewcommand{\labelenumiii}{\normalsize\bfseries \roman{enumiii})}
+
+
+\begin{document}
+
+\fancyhead[L]{\itshape{Facultad de Ciencias F\'isicas y Matem\'aticas}}
+\fancyhead[R]{\itshape{Universidad de Chile}}
+\rfoot[]{pág. \thepage}
+
+\begin{minipage}{11.5cm}
+    \begin{flushleft}
+        \hspace*{-0.6cm}\textbf{FI1000-1 Introducción a la Física Clásica}\\
+        \hspace*{-0.6cm}\textbf{Profesor:} Ignacio Bordeu\\
+        \hspace*{-0.6cm}\textbf{Auxiliares:} Alejandro Cartes \& Simón Yáñez\\
+        \hspace*{-0.6cm}\textbf{Ayudante:} Javier Cubillos\\
+    \end{flushleft}
+\end{minipage}
+
+\begin{picture}(2,3)
+    \put(366, 10){\includegraphics[scale=0.9]{2020-1/Imágenes/logo/dfi-fcfm.pdf}}
+\end{picture}
+
+\begin{center}
+	\LARGE\textbf{Auxiliar \#16}\\
+	\Large{Hidrostática}
+\end{center}
+
+\vspace{-1cm}
+\begin{enumerate}\setlength{\itemsep}{0.4cm}
+
+\item[]
+
+\item Un tubo en U abierto en ambos extremos se llena parcialmente con mercurio. A continuación se vierten $m=\SI{100}{\g}$ de agua en el brazo derecho, como se muestra en la figura. Si el brazo izquierdo del tubo tiene un área de sección transversal $A_1=\SI{10}{\cm^2}$ y el brazo derecho tiene un área de sección transversal $A_2=\SI{5}{\cm^2}$, determine:
+\begin{multicols}{2}
+    \begin{enumerate}
+        \item La longitud de la columna de agua en el brazo derecho del tubo
+        \item Si la densidad del mercurio es $\rho_{Hg}~=~\SI{13.6}{\g/\cm^3}$, ¿qué distancia h se eleva el mercurio en el brazo izquierdo?
+    \end{enumerate}
+    \columnbreak
+    \begin{figure}[H]
+        \centering
+        \includegraphics[width=0.5\linewidth]{2021-2/img/aux13/p2.png}
+    \end{figure}
+\end{multicols}
+
+\item Considere las situaciones a) y b) de la Fig. 1, ambas en equilibrio. En el caso a) una esfera de radio y densidad desconocidas se encuentra sujeta a una masa $m_1$. En b) la misma esfera se encuentra totalmente sumergida en agua y conectada a una masa $m_2$. En ambos casos las cuerdas y poleas son ideales.   
+\vspace{0.05cm}  
+    
+Calcule el radio de la esfera considerando como datos las masas $m_1$ y $m_2$ y la densidad del agua.
+    
+    \begin{figure}[H]
+        \centering
+        \includegraphics[width=0.7\linewidth]{2022-1/img/auxCrec2/esfera.png}
+    \end{figure}
+
+\vspace{0.2cm}  
+
+\item
+\begin{multicols}{2}
+    Dos globos esféricos inflados con un gas incompresible de densidad $\rho_g$, ambos de radio $R$, se unen mediante una cuerda de longitud $L$. Los dos globos se mantienen bajo el agua con el punto medio de la cuerda fijo al fondo. Calcular la fuerza de contacto entre los globos.
+    
+    \columnbreak
+    
+    \begin{figure}[H]
+        \centering
+        \includegraphics[height=0.5\linewidth]{2021-2/img/aux14/globos.png}
+    \end{figure}
+\end{multicols}
+
+\newpage
+\item 
+    Se tiene un objeto de altura $h$ y área transversal $A$ compuesto por un material de densidad homogénea $\rho$. El cubo esta sujeto a un resorte de constante elástica $k$ y largo natural $l_o$. Todo el sistema esta dentro de un recipiente lleno con un liquido con densidad $p_f$ hasta una altura $H$ , como se muestra en la figura.
+    \begin{enumerate}
+        \item Determine la posición de equilibrio del objeto con respecto al fondo del recipiente
+        \item \textbf{[Propuesto]} Determina que densidad debe tener el objeto para que, en equilibrio, flote semi-sumergido justo hasta la mitad. Comente los casos:
+        \begin{itemize}
+            \item $l_o > H -\frac{h}{2}$
+            \item $l_o = H -\frac{h}{2}$
+        \end{itemize}
+
+    \end{enumerate}
+    \begin{figure}[H]
+        \centering
+        \includegraphics[height=0.3\textwidth]{2023-1/img/aux_16/Aux 16 - P4.PNG}
+    \end{figure}
+
+
+
+
+
+% Para imágenes vectoriales -> el texto tiene que estar en LaTeX
+% \begin{figure}[htbp]
+%   \centering
+%   \svgpath{../Imagenes/ejercicios}  -> .. irse pa'trás 
+%   \includesvg{ej5.svg}
+% \end{figure}
+
+\end{enumerate}
+\end{document}

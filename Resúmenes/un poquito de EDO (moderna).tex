@@ -1,0 +1,292 @@
+\documentclass[letterpaper,11pt]{article}
+\oddsidemargin -1.0cm \textwidth 17.5cm
+
+\usepackage[utf8]{inputenc}
+\usepackage[activeacute,spanish, es-lcroman]{babel}
+\decimalpoint
+\usepackage{amsfonts,setspace}
+\usepackage{amsmath}
+\usepackage{amssymb, amsmath, amsthm}
+\usepackage{comment}
+\usepackage{float}
+\usepackage{amssymb}
+\usepackage{dsfont}
+\usepackage{anysize}
+\usepackage{multicol}
+\usepackage{enumerate}
+\usepackage{graphicx}
+\usepackage[left=1.5cm,top=2cm,right=1.5cm, bottom=1.7cm]{geometry}
+\setlength\headheight{1.5em} 
+\usepackage{fancyhdr}
+\usepackage{multicol}
+\usepackage{hyperref}
+\usepackage{wrapfig}
+\usepackage{subcaption}
+\usepackage{siunitx}
+\usepackage{cancel}
+\usepackage{mdwlist}
+\usepackage{tcolorbox}
+\usepackage{svg}
+\pagestyle{fancy}
+\fancyhf{}
+\renewcommand{\labelenumi}{\normalsize\bfseries P\arabic{enumi}.}
+\renewcommand{\labelenumii}{\normalsize\bfseries (\alph{enumii})}
+\renewcommand{\labelenumiii}{\normalsize\bfseries \roman{enumiii})}
+
+\begin{document}
+\graphicspath{{../2020-1/}}  % pa que compile las imágenes
+
+\fancyhead[L]{\itshape{Facultad de Ciencias F\'isicas y Matem\'aticas}}
+\fancyhead[R]{\itshape{Universidad de Chile}}
+
+\begin{center}
+	\LARGE \textbf{Un poquito de EDO}\\ %posible resumen
+	\small{Alejandro Cartes\\
+	\small{\href{mailto:alejandroml.cartes@gmail.com}{mail: alejandroml.cartes@gmail.com}}}
+\end{center}
+
+\begin{picture}(2,3)
+    \svgpath{../2021-2}  % descomentar si se agrega a carpeta "auxiliares"
+    \put(415, 35){\includesvg[scale=0.21]{img/dfi.svg}}
+\end{picture}
+
+\rfoot[]{pág. \thepage}
+
+En Introducción a la Física Moderna aún no se tienen muchas herramientas matemáticas, por este motivo se entregan las soluciones de las ecuaciones diferenciales que van saliendo, por ejemplo, en oscilaciones. De igual manera, con intuición y ciertos trucos, podemos resolver estas ecuaciones.
+
+\section*{Movimiento Armónico Simple (MAS)}
+
+\noindent Consideremos un bloque unido a un resorte
+
+\begin{figure}[H]
+    \centering
+    \begin{subfigure}[tr]{0.3\textwidth}
+        \centering
+        \svgpath{img/edo}
+        \includesvg[width=\linewidth]{spring.svg}
+    \end{subfigure}
+    \begin{subfigure}[tl]{0.6\textwidth}
+        al realizar un DCL llegamos a la siguiente ecuación de movimiento:
+        \begin{align*}
+            \hat{x}: \quad m\ddot{x}=-kx
+        \end{align*}
+        \vfill{}
+    \end{subfigure}
+\end{figure}
+
+\subsection*{¿Cómo resolvemos esto?}
+\noindent Consideremos el siguiente \textit{ansatz} (``solución astuta''): $x(t) = A e^{\lambda t}$ con $A \in \mathbb{R}$ y $\lambda \in \mathbb{C}$\\
+La idea es: MAS $\Rightarrow$ oscilaciones $\Rightarrow$ senos/cosenos $\Rightarrow$ exponencial detrás ($e^{i\theta}$)
+
+\noindent Este tipo de EDOs se resuelve con este método, donde el problema se traduce a determinar $\lambda$. Cabe mencionar que esto funciona ya que $x(t)$ será solución si soluciona nuestra ecuación diferencial (valga la redundancia).
+
+\noindent Dicho esto, tenemos:
+
+\begin{align*}
+    x(t) = Ae^{\lambda t} \longrightarrow \dot{x}=A\lambda e^{\lambda t}=\lambda x \longrightarrow \ddot{x}=\lambda^2 x
+\end{align*}
+
+\noindent Reemplazando en la ecuación del MAS:
+
+\begin{align*}
+    m\lambda^2x = -kx \Rightarrow \left(\lambda^2 +\frac{k}{m}\right)x = 0
+\end{align*}
+
+\noindent Así tenemos que: $\lambda^2 = -k/m \Rightarrow \lambda = \pm i \sqrt{k/m}$
+
+\noindent Recordando nuestro \textit{ansatz}, la pregunta que surge es cómo meter ambas soluciones de $\lambda$ a $x(t)$. Para ello hay que notar que, tanto $\lambda_+$ como $\lambda_-$, solucionan nuestro problema, por lo que la solución general será una \textit{combinación~lineal} de ambas soluciones, i.e.:
+
+\begin{align*}
+    x(t) = Ae^{\lambda t} &= A_1 e^{\lambda_+t} + A_2 e^{\lambda_- t}\\
+    &= A_1\exp{\left(i\sqrt{\frac{k}{m}}t\right)} + A_2\exp{\left(-i\sqrt{\frac{k}{m}}t\right)}
+\end{align*}
+
+\noindent De Introducción al Álgebra sabemos que $e^{i\theta} = \cos{\theta}+i\sin{\theta}$, y definiendo $\omega_0=\sqrt{k/m}$, tenemos:
+
+\begin{align*}
+    x(t) &= A_1\left[\cos{(\omega_0 t)} + i\sin{(\omega_0 t)}\right] + A_2\left[\cos{(\omega_t)}-i\sin{(\omega_0 t)}\right]\\
+    &= {\color{red}\underbrace{\color{black}(A_1+A_2)}_\textrm{otra cte.}}\cos{(\omega_0t)} + {\color{red}\underbrace{\color{black}i(A_1-A_2)}_\textrm{otra cte.}}\sin{(\omega_0t)}\\
+    &= B_1\cos{(\omega_0 t)} + B_2\sin{(\omega_0t)}
+\end{align*}
+
+\noindent Ahora veamos la posibilidad de reescribir esta solución. ¿A qué lo podríamos reescribir? Para ello analicemos un caso simple: $\cos{\alpha}+\sin{\alpha}$
+
+\begin{figure}[H]
+    \centering
+    \svgpath{img/edo}
+    \includesvg[width=0.6\linewidth]{trig.svg}
+\end{figure}
+
+\noindent Del gráfico podemos apreciar que $\sin{\alpha}+\cos{\alpha}$ se comporta como una función trigonométrica por sí misma, con una amplitud y una fase diferente. De esta manera la podemos modelar como $C\cos{(\alpha+\delta_1)}$ o $C\sin{(\alpha+\delta_2)}$.
+
+
+\noindent Con esto en mente, recordemos la siguiente propiedad trigonométrica: $$\cos{(\alpha+\beta)} = \cos\alpha\cos\beta-\sin\alpha\sin\beta$$ y reescribiendo las constantes como $B_1=C\cos\delta$ y $B_2=-C\sin\delta$, donde $C$ y $\delta$ son nuevas constantes, tendremos:
+\begin{align*}
+    x(t) &= (C\cos\delta)\cos{(\omega_0 t)} + (-C\sin\delta)\sin{(\omega_0t)}\\
+    &= C\left[\cos\delta\cos{(\omega_0 t)} - \sin\delta\sin{(\omega_0t)}\right]\\
+    &= C\cos{(\omega_0t + \delta)}
+\end{align*}
+
+\noindent De manera análoga, recordando que $\sin{(\alpha+\beta)}=\sin\alpha\cos\beta+\cos\alpha\sin\beta$ y considerando $B_1=C\sin\delta$ y $B_2=~C\cos\delta$, tendremos:
+\begin{align*}
+    x(t) &= (C\sin\delta)\cos{(\omega_0 t)} + (C\cos\delta)\sin{(\omega_0t)}\\
+    &= C\left[\sin\delta\cos{(\omega_0 t)} + \cos\delta\sin{(\omega_0t)}\right]\\
+    &= C\sin{(\omega_0t + \delta)}
+\end{align*}
+
+\noindent En síntesis tenemos:
+
+\begin{center}
+    \begin{tcolorbox}[colback=white,colframe=red, width=0.4\textwidth]
+        \begin{align*}
+            x(t) &= A_1e^{i\omega_0t}+A_2e^{-i\omega_0t}\\
+            &= B_1\cos{(\omega_0t)}+B_2\sin{(\omega_0t)}\\
+            &= C\cos{(\omega_0t+\delta_1)}\\
+            &= C\sin{(\omega_0t+\delta_2)}
+        \end{align*}
+    \end{tcolorbox}
+\end{center}
+
+\noindent Todas estas soluciones son válidas cuyas constantes se obtienen de las condiciones del problema, usualmente en $t=0$ (condiciones iniciales)
+
+\section*{Oscilador Amortiguado}
+
+Consideremos que nuestro resorte está inmerso en un fluido, añadiendo así roce al sistema. Este roce se denomina \textit{roce viscoso} y se modela de forma proporcional a la velocidad, es decir, $F_{\text{roce visc.}} = b\dot{x}$. Como el roce se opone al movimiento vamos a tener la siguiente ecuación de movimiento:
+\begin{align*}
+    m\ddot{x}=-kx-b\dot{x}
+\end{align*}
+
+\noindent ¿Cómo lo resolvemos? Apliquemos el \textit{ansatz} anterior: $x(t)=Ae^{\lambda t}$
+
+\noindent Reemplazando tendremos:
+\begin{align*}
+    m\lambda^2=-k-b\lambda \quad\Rightarrow\quad m\lambda^2+b\lambda+k=0 \quad \Rightarrow \quad \lambda^2+\frac{b}{m}\lambda+\frac{k}{m}=0
+\end{align*}
+\noindent Al igual que antes, llamemos $\omega_0=\sqrt{k/m}$ y llamemos $2\gamma=b/m$ (usual en la literatura). De esta manera:
+
+\begin{align*}
+    \lambda^2+2\gamma\lambda+\omega_0^2=0 \quad \Rightarrow\quad \lambda=\frac{-2\gamma\pm\sqrt{4\gamma^2-4\omega_0^2}}{2} = -\gamma\pm\sqrt{\gamma^2-\omega_0^2}
+\end{align*}
+
+\noindent Como queremos que hayan oscilaciones, generemos el término imaginario:
+\begin{align*}
+    \lambda = -\gamma \pm i {\color{red}\underbrace{\color{black}\sqrt{\omega_0^2-\gamma^2}}_\mathrm{\omega}}=-\gamma\pm i\omega
+\end{align*}
+
+\noindent Reemplazando en nuestro \textit{ansatz} e inspirados por la parte anterior:
+
+\begin{multicols}{2}
+    \begin{center}
+        \begin{tcolorbox}[colback=white,colframe=red, width=0.5\textwidth]
+            \begin{align*}
+                x(t) = Ae^{\lambda t} &= A_1e^{\lambda_+t}+A_2e^{\lambda_-t}\\
+                &= e^{-\gamma t}\left[A_1e^{i\omega t}+A_2e^{-i\omega t}\right]\\
+                &= e^{-\gamma t} \left[B_1\cos{(\omega t)}+B_2\sin{(\omega t)}\right]\\
+                &= e^{-\gamma t} C\cos{(\omega t+\delta_1)}\\
+                &= e^{-\gamma t} C\sin{(\omega t+\delta_2)}
+            \end{align*}
+        \end{tcolorbox}
+    \end{center}
+    \columnbreak
+    \begin{figure}[H]
+        \centering
+        \svgpath{img/edo}
+        \includesvg[width=\linewidth]{dumped.svg}
+    \end{figure}
+\end{multicols}
+
+\noindent Notemos que, si no se hubiera generado el término imaginario, es decir: $\gamma^2>\omega_0^2$
+
+\noindent no habría exponencial imaginaria, por lo que no habría oscilación. Solamente habría un decaimiento exponencial
+
+\section*{Oscilador Forzado-Amortiguado}
+\noindent Consideremos que al sistema anterior le añadimos una máquina que genera un forzamiento de forma sinusoidal.
+
+\begin{figure}[H]
+    \centering
+    \begin{subfigure}[tr]{0.35\textwidth}
+        \centering
+        \svgpath{img/edo}
+        \includesvg[width=\linewidth]{forced.svg}
+    \end{subfigure}
+    \begin{subfigure}[tl]{0.6\textwidth}
+        al realizar un DCL llegamos a la siguiente ecuación de movimiento:
+        \begin{align*}
+            \hat{x}: \quad m\ddot{x}&=-kx-b\dot{x}+F_0\sin{(\omega t)}
+        \end{align*}
+        \vfill{}
+    \end{subfigure}
+\end{figure}
+
+\noindent\textbf{Intuición:} el forzamiento no depende del bloque de masa $m$, es decir, a la máquina no le importa si hay roce o si hay un resorte de por medio. Por otro lado, si el forzamiento de la máquina es nulo ($F_0=0$), entonces el problema se traduce en lo resuelto anteriormente.
+
+\noindent Esto nos lleva a pensar que: $x(t) = x_\text{masa}+x_\text{forzamiento}$\\
+\noindent Y efectivamente así es!\\
+\noindent Formalmente a la solución $x_\text{masa}$ se le denomina \textit{solución homogénea} $x_h$ (resuelve $m\ddot{x}_h+~b\dot{x}_h~+~kx_h~=~0$)\\
+\noindent y a la solución $x_\text{forz.}$ se le denomina \textit{solución particular} $x_p$ (resuelve $m\ddot{x}_p+~b\dot{x}_p~+~kx_p~=~F_0\sin{(\omega t)}$)
+
+Para determinar la solución particular usualmente se analiza qué pasa con los otros términos. Como sabemos que en $t\rightarrow\infty$ la solución homogénea se hace nula (el roce ``disipó'' toda amplitud inicial), la masita oscilará netamente gracias al forzamiento. Bajo esta idea, démonos una solución del estilo:
+$$x_p = x_\text{forz}=A\sin{(\omega t+\delta)}$$
+
+\noindent Reemplacemos este \textit{ansatz} en la ecuación de movimiento, pero antes definamos $f_0=F_0/m$, $2\gamma=b/m$ y $\omega_0=\sqrt{k/m}$. De esta manera:
+
+\begin{align*}
+        \ddot{x}_{p}+2\gamma \dot{x}_p+\omega_0^2x_p&=f_0\sin{(\omega t)}\\
+        -A\omega^2\sin{(\omega t+\delta)}+2\gamma A\omega\cos{(\omega t+\delta)}+\omega_0^2A\sin{(\omega t+\delta)}&=f_0\sin{(\omega t)}\\
+        A\sin{(\omega t+\delta)}\left[-\omega^2+\omega_0^2\right]+2\gamma A\omega\cos{(\omega t+\delta)}&=f_0\sin{(\omega t)}
+\end{align*}
+
+\noindent Expandiendo $\sin{(\omega t+\delta)}$ y $\cos{(\omega t+\delta)}$ utilizando la propiedades de suma de 
+ángulos, tendremos:
+
+\begin{align*}
+    f_0\sin{(\omega t)} &= A\left(\sin\omega t\cos\delta+\sin\delta\cos\omega t\right)\left[-\omega^2+\omega_0^2\right]+2\gamma A\omega \left(\cos\omega t\cos\delta - \sin\omega t\sin\delta\right)\\
+    f_0\sin{(\omega t)} &= {\color{red}\underbrace{\color{black}A\sin\omega t\left[\cos\delta(\omega_0^2-\omega^2)-2\gamma\omega \sin\delta\right]}_\mathrm{f_0\sin\omega t}}+{\color{red}\underbrace{\color{black}A\cos\omega t\left[\sin\delta(\omega_0^2-\omega^2)+2\gamma\omega\cos\delta\right]}_\mathrm{=0}}
+\end{align*}
+
+\noindent ¿Por qué el último término es 0? Porque al lado izquierdo de la igualdad tenemos $\sin{\omega t}$, entonces la contribución por parte del coseno tiene que ser nula. De esta manera:
+
+\begin{align*}
+    0 &= \sin\delta(\omega_0^2-\omega^2)+2\gamma\omega\cos\delta \quad \Rightarrow\quad \tan\delta=\frac{2\gamma\omega}{\omega^2-\omega_0^2}
+\end{align*}
+
+\noindent Y por otro lado:
+
+\begin{align*}
+    f_0 &= A\left[\cos\delta(\omega_0^2-\omega^2)-2\gamma\omega \sin\delta\right] \quad \boldsymbol{/ ()^2}\\
+    f_0^2 &= A^2\left[\cos^2\delta(\omega_0^2-\omega^2)^2+4\gamma^2\omega^2 \sin^2\delta-4\gamma\omega(\omega_0^2-\omega^2)\cos\delta\sin\delta\right]\\
+    f_0^2 &= A^2 \cos^2\delta\left[(\omega_0^2-\omega^2)^2+4\gamma^2\omega^2\tan^2\delta-4\gamma\omega(\omega_0^2-\omega^2)\tan\delta\right]
+\end{align*}
+
+\noindent Recordando que:
+\begin{align*}
+    \sin^2\alpha+\cos^2\alpha=1 \quad\Rightarrow\quad \tan^2\alpha+1=1/\cos^2\alpha \quad \Rightarrow\quad \cos^2\alpha=1/(1+\tan^2\alpha)
+\end{align*}
+
+\noindent tendremos que:
+\begin{align*}
+    \cos^2\delta = \frac{1}{1+\tan^2\delta} = \frac{1}{1+(2\gamma\omega/(\omega^2-\omega_0^2))^2}=\frac{(\omega^2-\omega_0^2)^2}{(\omega^2-\omega_0^2)^2+4\gamma^2\omega^2}
+\end{align*}
+
+\noindent Reemplazando:
+
+\begin{align*}
+    f_0^2 &= A^2\frac{(\omega^2-\omega_0^2)^2}{(\omega^2-\omega_0^2)^2+4\gamma^2\omega^2}\left[(\omega_0^2-\omega^2)^2+4\gamma^2\omega^2\frac{4\gamma^2\omega^2}{(\omega^2-\omega_0^2)^2}-4\gamma\omega(\omega^2_0-\omega^2)\frac{2\gamma\omega}{\omega^2-\omega_0^2}\right]\\
+    f_0^2 &= A^2\frac{(\omega^2-\omega_0^2)^2}{(\omega^2-\omega_0^2)^2+4\gamma^2\omega^2} \left[(\omega_0^2-\omega^2)^2- 2\frac{4\gamma^2\omega^2 }{(\omega^2-\omega_0^2)}(\omega_0^2-\omega^2)+\left(\frac{4\gamma^2\omega^2}{\omega^2-\omega_0^2}\right)^2\right]\\
+    f_0^2 &= A^2\frac{(\omega^2-\omega_0^2)^2}{(\omega^2-\omega_0^2)^2+4\gamma^2\omega^2}\left[(\omega_0^2-\omega^2)-\frac{4\gamma^2\omega^2}{(\omega^2-\omega_0^2)}\right]^2\\
+    f_0^2 &= A^2 \frac{(\omega^2-\omega_0^2)^2}{(\omega^2-\omega_0^2)^2+4\gamma^2\omega^2}\frac{\left[-(\omega^2-\omega_0^2)^2-4\gamma^2\omega^2\right]^2}{(\omega^2-\omega_0^2)^2}\\
+    f_0^2 &= A^2 \left[(\omega^2-\omega_0^2)^2+4\gamma^2\omega^2\right]
+\end{align*}
+
+\noindent Por lo que finalmente tenemos que:
+\begin{align*}
+    A = \frac{f_0}{\sqrt{(\omega^2-\omega_0^2)^2+4\gamma^2\omega^2}}
+\end{align*}
+
+\noindent Y así la solución general se puede expresar como:
+
+\begin{align*}
+    x(t) &= x_h + x_p\\
+    &= C e^{-\gamma t}\cos{\left(\sqrt{\omega_0^2-\gamma^2}t+\delta_1\right)} + \frac{F_0/m}{\sqrt{(\omega^2-\omega_0^2)^2+4\gamma^2\omega^2}}\sin{(\omega t+\delta)}
+\end{align*}
+\end{document}
